@@ -1,0 +1,709 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+
+/* MENSAJE SUPERIOR */
+/* MENSAJE SUPERIOR */
+/* MENSAJE SUPERIOR */
+/* MENSAJE SUPERIOR */
+/* MENSAJE SUPERIOR */
+/* MENSAJE SUPERIOR */
+/* MENSAJE SUPERIOR */
+/* MENSAJE SUPERIOR */
+/* MENSAJE SUPERIOR */
+/* MENSAJE SUPERIOR */
+/* MENSAJE SUPERIOR */
+
+
+.tituloInicio {
+  font-family: 'Arvo', serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: white;
+  background-color: rgb(238 38 119);
+}
+
+.tituloInicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.tituloInicio {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* NAVBAR */
+/* NAVBAR */
+/* NAVBAR */
+/* NAVBAR */
+/* NAVBAR */
+.navbar {
+  font-family: 'Arvo', serif;
+  font-size: 1.3rem;
+  font-weight: normal;
+  font-style: none;
+}
+
+.navbar {
+  flex: 1;
+  margin-top: 0;
+  padding: 0.20rem;
+}
+
+.navbar a:hover {
+  color: black;
+}
+
+.navbar-dark {
+  --bs-navbar-color: rgba(255, 255, 255);
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+.submenu {
+  background-color: rgb(255 210 63);
+  list-style-type: none;
+  padding: 1rem;
+  position: absolute;
+  top: 100%;
+  padding-top: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+
+/* NAVBAR */
+/* NAVBAR */
+/* NAVBAR */
+/* NAVBAR */
+
+
+/* TEXTO PRINCIPAL */
+/* TEXTO PRINCIPAL */
+/* TEXTO PRINCIPAL */
+/* TEXTO PRINCIPAL */
+h1.principal {
+  font-family: 'Arvo', serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238 38 119);
+}
+
+h1.principal {
+  display: flex;
+  justify-content: center;
+}
+
+h3.subprincipal {
+  font-family: 'Arvo', serif;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238 38 119);
+}
+
+/* QUIENSOY */
+/* QUIENSOY */
+/* QUIENSOY */
+/* QUIENSOY */
+/* QUIENSOY */
+/* QUIENSOY */
+/* QUIENSOY */
+/* QUIENSOY */
+/* QUIENSOY */
+
+.descripcionm {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "descripcionm"
+    "descripcionm";
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+
+.descripcionm {
+  grid-area: descripcionm;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  gap: 0.5rem;
+  flex: 1;
+height: 100%;
+}
+
+
+/* portfolio */
+/* portfolio */
+/* portfolio */
+/* portfolio */
+/* portfolio */
+/* portfolio */
+/* portfolio */
+
+.cm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  padding: 3rem;
+}
+
+.cm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "servicios1 servicios2"
+    "cm1    wd1";
+  justify-items: center;
+  align-items: center;
+}
+
+.servicios1 {
+  grid-area: servicios1;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+}
+
+.servicios2 {
+  grid-area: servicios2;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+}
+
+.cm {
+  display: flex;
+  font-family: 'Arvo', serif;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238 38 119)
+}
+
+.wd {
+  display: flex;
+  font-family: 'Arvo', serif;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238 38 119)
+}
+
+.cm1 {
+  grid-area: cm1;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+}
+
+.cm1 {
+  display: flex;
+  font-family: 'Arvo', serif;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238 38 119)
+}
+
+
+.container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+
+
+/* carrusel */
+.carousel {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.carousel img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+/* CONTACTO */
+/* CONTACTO */
+/* CONTACTO */
+/* CONTACTO */
+/* CONTACTO */
+/* CONTACTO */
+/* CONTACTO */
+/* CONTACTO */
+/* CONTACTO */
+
+.encabezado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.redessociales {
+  background-color: rgb(255 210 63);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.bequicm {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "emailcontacto "
+    "emailcontacto  ";
+  justify-items: stretch;
+  align-items: stretch;
+  background-color: rgb(238 38 119);
+}
+
+
+.emailcontacto {
+  background-color: rgb(238 38 119);
+  grid-area: emailcontacto;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  gap: 3rem;
+
+}
+
+.emailcontacto {
+  color: white;
+  font-family: 'Arvo', serif;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+
+}
+
+
+.form {
+  background-color: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arvo', serif;
+  font-size: 18px;
+}
+
+
+
+
+
+/* TEXTOS */
+/* TEXTOS */
+/* TEXTOS */
+/* TEXTOS */
+/* TEXTOS */
+/* TEXTOS */
+/* TEXTOS */
+
+h1.contacto {
+  font-family: 'Arvo', serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238 38 119);
+}
+
+h1.contacto {
+  display: flex;
+  justify-content: center;
+}
+
+h3.contacto {
+  font-family: 'Arvo', serif;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238 38 119);
+}
+
+
+
+
+
+
+/*CARRO COMPRAS*/
+div.compras {
+  position: fixed;
+  bottom: 500px;
+  right: 0;
+}
+
+div.compras img {
+  height: 60px;
+  width: auto;
+}
+
+div.compras img:hover {
+  transform: scale(1.2);
+}
+
+
+
+/*SERVICIOS 1*/
+/*SERVICIOS 1*/
+/*SERVICIOS 1*/
+/*SERVICIOS 1*/
+/*SERVICIOS 1*/
+/*SERVICIOS 1*/
+/*SERVICIOS 1*/
+/*SERVICIOS 1*/
+/*SERVICIOS 1*/
+/*SERVICIOS 1*/
+/*SERVICIOS 1*/
+/*SERVICIOS 1*/
+/*SERVICIOS 1*/
+
+/*BOX 1*/
+.servicios {
+  padding: 0;
+  font-family: 'Arvo', serif;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.box1 {
+  background-color: rgb(238 38 119);
+  padding: 0%;
+}
+
+.servicios .box1 {
+  font-family: 'Arvo', serif;
+  font-size: 30px;
+  font-size: 30px;
+  color: rgb(238 38 119);
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+
+.servicios .box1 {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.servicios .box1 {
+  display: flex;
+  width: 400px;
+  height: 450px;
+  border-radius: 16px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.servicios .box1:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.servicios .box1 img {
+  display: flex;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.servicios .box1 h3 {
+  font-weight: 600;
+}
+
+.servicios .box1 p {
+  padding: 0.1rem;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.servicios .box1 a {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+/*BOX 2*/
+.box2 {
+  background-color: rgb(0 206 203);
+  padding: 1%;
+}
+
+.servicios .box2 {
+  font-family: 'Arvo', serif;
+  font-size: 30px;
+  color: rgb(0 206 203);
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+
+.servicios .box2 {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.servicios .box2 {
+  width: 400px;
+  height: 450px;
+  border-radius: 16px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.servicios .box2:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.servicios .box2 img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.servicios .box2 h3 {
+  font-weight: 600;
+}
+
+.servicios .box2 p {
+  padding: 0.1rem;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.servicios .box2 a {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+
+/*BOX3*/
+.box3 {
+  background-color: rgb(0 206 203);
+  padding: 0.5%;
+}
+
+
+.servicios .box3 {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.servicios .box3 {
+  width: 500px;
+  height: 500px;
+  border-radius: 2rem;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.servicios .box3:hover {
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.servicios .box3 img {
+  width: 450px;
+  height: 450px;
+  border-radius: 1rem;
+}
+
+.servicios {
+  font-family: 'Arvo', serif;
+  font-size: 2rem;
+  color: black;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+
+.desc {
+  font-family: 'Arvo', serif;
+  font-size: 1rem;
+  color: black;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+
+.listado {
+  display: flex;
+  justify-content: center;
+}
+
+.accordion-body {
+  font-family: 'Arvo', serif;
+  font-size: 1rem;
+  color: black;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+
+
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+/* PIE DE PAGINA */
+
+/*LOGOWATS*/
+div.whatsappicon {
+  position: fixed;
+  bottom: 200px;
+  right: 0;
+}
+
+div.whatsappicon img {
+  height: 60px;
+  width: auto;
+}
+
+div.whatsappicon img:hover {
+  transform: scale(1.2);
+}
+
+/*REDES SOCIALES PIE PAGINA*/
+.logoinferior {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.logoinferior img {
+  height: 100px;
+  width: auto;
+  margin-top: 20px;
+}
+
+.logoinferior img:hover {
+  transform: scale(1.2);
+}
+
+
+/*REDES SOCIALES PIE PAGINA*/
+
+.redeswebsicon {
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-decoration: none;
+  justify-content: space-between;
+
+}
+
+.redeswebsicon img {
+  height: 20px;
+  width: auto;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+
+/*derechos reservados*/
+p.CopyRigth {
+  font-family: 'Arvo', serif;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: oblique;
+  text-align: center;
+  color: black;
+}
