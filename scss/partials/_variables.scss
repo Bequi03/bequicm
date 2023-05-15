@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
+$colorrosa: rgb(238 38 119);
+$coloramarillo: rgb(255 210 63);
+$colorturquesa: rgb(0 206 203);
+
+%redeswebiconos {
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-decoration: none;
+  justify-content: space-between;
+
+  img {
+    height: 20px;
+    width: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+%textoprincipal {
+  font-family: 'Arvo', serif;
+  color: $colorrosa;
+  justify-content: center;
+  display: flex;
+
+  h1.principal {
+    font-size: 20px;
+    font-weight: normal;
+    font-style: none;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  h3.subprincipal {
+    display: flex;
+    font-size: 10px;
+    font-weight: normal;
+    font-style: none;
+    text-align: center;
+    justify-content: center;
+  }
+}

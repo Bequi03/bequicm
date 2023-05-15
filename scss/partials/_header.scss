@@ -1,0 +1,89 @@
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.tituloInicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:$colorrosa;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  font-family: 'Arvo', serif;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+}
+
+.bequicmwd {
+  color: $colorrosa;
+  font-family: 'Arvo', serif;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+
+  h1.principal {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  h3.subprincipal {
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+
+.navbar {
+  font-family: 'Arvo', serif;
+  font-size: 1.3rem;
+  font-weight: normal;
+  font-style: none;
+}
+
+.navbar {
+  flex: 1;
+  margin-top: 0;
+  padding: 0.20rem;
+}
+
+.navbar a:hover {
+  color: $colorrosa;
+}
+
+.navbar-dark {
+  --bs-navbar-color: rgba(255, 255, 255);
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+.submenu {
+  background-color: $coloramarillo;
+  list-style-type: none;
+  padding: 1rem;
+  position: absolute;
+  top: 100%;
+  padding-top: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}

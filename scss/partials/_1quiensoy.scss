@@ -1,0 +1,243 @@
+ .bequicmwd{
+  @extend %textoprincipal}
+
+ .descripcion {
+   background-color: rgb(238 38 119);
+   border-radius: 16px;
+   width: 1200px;
+   margin-left: auto;
+   margin-right: auto;
+   display: grid;
+   padding: 1rem;
+   grid-template-columns: 3fr 1fr;
+   grid-template-rows: 1fr;
+   grid-template-areas:
+     "textodescripcion fotodesc";
+   color: $coloramarillo;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+
+   .fotodesc {
+     display: flex;
+     grid-area: fotodesc;
+     padding: 0.5rem;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
+
+   .textodescripcion {
+     display: flex;
+     grid-area: textodescripcion;
+     padding: 1rem;
+     font-family: 'Arvo', serif;
+     font-size: 20px;
+     font-weight: normal;
+     font-style: none;
+     text-align: center;
+     color: $coloramarillo;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
+ }
+
+
+
+
+
+
+ .unPocoMas {
+   font-family: 'Arvo', serif;
+   font-size: 20px;
+   font-weight: normal;
+   font-style: none;
+   text-align: center;
+   color: rgb(238 38 119);
+ }
+
+
+
+
+
+
+
+
+ .encabezadoport {
+   width: 1200px;
+   margin-left: auto;
+   margin-right: auto;
+   display: grid;
+   padding: 1rem;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   grid-template-areas:
+     "dedondefoto dedondequeestfoto dedondecmfoto dedondewdfoto "
+     "dedondetexto dedondequeesttex dedondecmtexto dedondewdtexto"
+     "dedondedesc dedondequeestdesc dedondecmtexto2 dedondewdtexto2";
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+
+   .dedondefoto {
+     display: flex;
+     grid-area: dedondefoto;
+     padding: 0.5rem;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
+
+   .dedondetexto {
+     display: flex;
+     grid-area: dedondetexto;
+     padding: 1rem;
+     font-family: 'Arvo', serif;
+     font-size: 20px;
+     font-weight: normal;
+     font-style: none;
+     text-align: center;
+     color: $colorrosa;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
+
+   .dedondedesc {
+     display: flex;
+     grid-area: dedondedesc;
+     padding: 1rem;
+     font-family: 'Arvo', serif;
+     font-size: 20px;
+     font-weight: normal;
+     font-style: none;
+     text-align: center;
+     color: $colorrosa;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
+
+
+   .dedondequeestfoto {
+     display: flex;
+     grid-area: dedondequeestfoto;
+     padding: 0.5rem;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
+
+   .dedondequeesttex {
+     display: flex;
+     grid-area: dedondequeesttex;
+     padding: 1rem;
+     font-family: 'Arvo', serif;
+     font-size: 20px;
+     font-weight: normal;
+     font-style: none;
+     text-align: center;
+     color: $colorrosa;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
+
+   .dedondequeestdesc {
+     display: flex;
+     grid-area: dedondequeestdesc;
+     padding: 1rem;
+     font-family: 'Arvo', serif;
+     font-size: 20px;
+     font-weight: normal;
+     font-style: none;
+     text-align: center;
+     color: $colorrosa;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
+
+
+   .dedondecmfoto {
+     display: flex;
+     grid-area: dedondecmfoto;
+     padding: 0.5rem;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
+
+   .dedondecmtexto {
+     display: flex;
+     grid-area: dedondecmtexto;
+     padding: 1rem;
+     font-family: 'Arvo', serif;
+     font-size: 20px;
+     font-weight: normal;
+     font-style: none;
+     text-align: center;
+     color: $colorrosa;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
+
+   .dedondecmtexto2 {
+     display: flex;
+     grid-area: dedondecmtexto2;
+     padding: 1rem;
+     font-family: 'Arvo', serif;
+     font-size: 20px;
+     font-weight: normal;
+     font-style: none;
+     text-align: center;
+     color: $colorrosa;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
+
+
+   .dedondewdfoto {
+    display: flex;
+    grid-area: dedondewdfoto;
+    padding: 0.5rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .dedondewdtexto {
+    display: flex;
+    grid-area: dedondewdtexto;
+    padding: 1rem;
+    font-family: 'Arvo', serif;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: none;
+    text-align: center;
+    color: $colorrosa;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .dedondewdtexto2 {
+    display: flex;
+    grid-area: dedondewdtexto2;
+    padding: 1rem;
+    font-family: 'Arvo', serif;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: none;
+    text-align: center;
+    color: $colorrosa;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+
+ }

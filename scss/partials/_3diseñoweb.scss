@@ -1,0 +1,74 @@
+
+/*BOX3*/
+.box3 {
+    background-color: rgb(0 206 203);
+    padding: 0.5%;
+  }
+  
+  
+  .servicios .box3 {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .servicios .box3 {
+    width: 500px;
+    height: 500px;
+    border-radius: 2rem;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+  }
+  
+  .servicios .box3:hover {
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .servicios .box3 img {
+    width: 450px;
+    height: 450px;
+    border-radius: 1rem;
+  }
+  
+  .servicios {
+    font-family: 'Arvo', serif;
+    font-size: 2rem;
+    color: black;
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
+  }
+  
+  .desc {
+    font-family: 'Arvo', serif;
+    font-size: 1rem;
+    color: black;
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
+  }
+  
+  .listado {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .accordion-body {
+    font-family: 'Arvo', serif;
+    font-size: 1rem;
+    color: black;
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
+  }
+  

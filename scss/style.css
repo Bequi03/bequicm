@@ -1,0 +1,1480 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
+.redeswebsicon {
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-decoration: none;
+  justify-content: space-between;
+}
+.redeswebsicon img {
+  height: 20px;
+  width: auto;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.texto, .bequicmwd {
+  font-family: "Arvo", serif;
+  color: rgb(238, 38, 119);
+  justify-content: center;
+  display: flex;
+}
+.texto h1.principal, .bequicmwd h1.principal {
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+.texto h3.subprincipal, .bequicmwd h3.subprincipal {
+  display: flex;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  justify-content: center;
+}
+
+.inicio {
+  background-color: rgb(238, 38, 119);
+  border-radius: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: "texto1 foto" "texto2 foto";
+}
+.inicio .textoinicio1 {
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(255, 210, 63);
+  display: flex;
+  grid-area: texto1;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.inicio .textoinicio2 {
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(255, 210, 63);
+  display: flex;
+  grid-area: texto2;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.inicio .fotobequi {
+  display: flex;
+  grid-area: foto;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.trabajaconmigoinicio {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: "textocm1" "textocm2";
+  color: rgb(238, 38, 119);
+  font-family: "Arvo", serif;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.trabajaconmigoinicio .trabajaconmigo {
+  display: flex;
+  grid-area: textocm1;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.trabajaconmigoinicio .trabajaconmigosub {
+  display: flex;
+  grid-area: textocm2;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.qservicio {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "logoce logoaud logoases logopc logowd" "textoce textoaud textoases textopc textowd" "texto2ce texto2aud texto2ases texto2pc texto2wd" "botonce botonaud botonases botonpc botonwd";
+  color: rgb(238, 38, 119);
+  font-family: "Arvo", serif;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .logoce {
+  grid-area: logoce;
+  display: flex;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .textoce {
+  display: flex;
+  grid-area: textoce;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .texto2ce {
+  display: flex;
+  grid-area: texto2ce;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .botonce {
+  display: flex;
+  grid-area: botonce;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .logoaud {
+  display: flex;
+  grid-area: logoaud;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .textoaud {
+  grid-area: textoaud;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .texto2aud {
+  display: flex;
+  grid-area: texto2aud;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .botonaud {
+  display: flex;
+  grid-area: botonaud;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .logoases {
+  display: flex;
+  grid-area: logoases;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .textoases {
+  grid-area: textoases;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .texto2ases {
+  display: flex;
+  grid-area: texto2ases;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .botonases {
+  display: flex;
+  grid-area: botonases;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .logopc {
+  display: flex;
+  grid-area: logopc;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .textopc {
+  grid-area: textopc;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .texto2pc {
+  display: flex;
+  grid-area: texto2pc;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .botonpc {
+  display: flex;
+  grid-area: botonpc;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .logowd {
+  display: flex;
+  grid-area: logowd;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .textowd {
+  grid-area: textowd;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .texto2wd {
+  display: flex;
+  grid-area: texto2wd;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .botonwd {
+  display: flex;
+  grid-area: botonwd;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+@media (min-width: 400px) and (max-width: 1000px) {
+  .inicio {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .fotobequi {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+@media (min-width: 804px) and (max-width: 1000px) {
+  .qservicio {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "logoce logoaud logoases" "textoce textoaud textoases" "texto2ce texto2aud texto2ases" "botonce botonaud botonases " " logopc logowd ." "textopc textowd ." "texto2pc texto2wd ." "otonpc botonwd .";
+  }
+}
+@media (min-width: 400px) and (max-width: 803px) {
+  .qservicio {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.tituloInicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(238, 38, 119);
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  font-family: "Arvo", serif;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+}
+
+.bequicmwd {
+  color: rgb(238, 38, 119);
+  font-family: "Arvo", serif;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+}
+.bequicmwd h1.principal {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+.bequicmwd h3.subprincipal {
+  font-size: 10px;
+  text-align: center;
+}
+
+.navbar {
+  font-family: "Arvo", serif;
+  font-size: 1.3rem;
+  font-weight: normal;
+  font-style: none;
+}
+
+.navbar {
+  flex: 1;
+  margin-top: 0;
+  padding: 0.2rem;
+}
+
+.navbar a:hover {
+  color: rgb(238, 38, 119);
+}
+
+.navbar-dark {
+  --bs-navbar-color: rgba(255, 255, 255);
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+.submenu {
+  background-color: rgb(255, 210, 63);
+  list-style-type: none;
+  padding: 1rem;
+  position: absolute;
+  top: 100%;
+  padding-top: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.descripcion {
+  background-color: rgb(238, 38, 119);
+  border-radius: 16px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "textodescripcion fotodesc";
+  color: rgb(255, 210, 63);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.descripcion .fotodesc {
+  display: flex;
+  grid-area: fotodesc;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.descripcion .textodescripcion {
+  display: flex;
+  grid-area: textodescripcion;
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(255, 210, 63);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.unPocoMas {
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+}
+
+.encabezadoport {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "dedondefoto dedondequeestfoto dedondecmfoto dedondewdfoto " "dedondetexto dedondequeesttex dedondecmtexto dedondewdtexto" "dedondedesc dedondequeestdesc dedondecmtexto2 dedondewdtexto2";
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .dedondefoto {
+  display: flex;
+  grid-area: dedondefoto;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .dedondetexto {
+  display: flex;
+  grid-area: dedondetexto;
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .dedondedesc {
+  display: flex;
+  grid-area: dedondedesc;
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .dedondequeestfoto {
+  display: flex;
+  grid-area: dedondequeestfoto;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .dedondequeesttex {
+  display: flex;
+  grid-area: dedondequeesttex;
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .dedondequeestdesc {
+  display: flex;
+  grid-area: dedondequeestdesc;
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .dedondecmfoto {
+  display: flex;
+  grid-area: dedondecmfoto;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .dedondecmtexto {
+  display: flex;
+  grid-area: dedondecmtexto;
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .dedondecmtexto2 {
+  display: flex;
+  grid-area: dedondecmtexto2;
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .dedondewdfoto {
+  display: flex;
+  grid-area: dedondewdfoto;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .dedondewdtexto {
+  display: flex;
+  grid-area: dedondewdtexto;
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .dedondewdtexto2 {
+  display: flex;
+  grid-area: dedondewdtexto2;
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.projects-list {
+  padding-inline: 9rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.projects-list .project {
+  background-color: rgb(238, 38, 119);
+  padding: 2rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(255, 210, 63);
+  transition: 0.2s;
+  border-radius: 40px;
+}
+.projects-list .project-icons {
+  display: flex;
+  justify-content: center;
+}
+.projects-list .project-icons a {
+  color: white;
+  transition: 0.2s;
+  gap: 1rem;
+  text-align: center;
+  font-size: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+  justify-content: center;
+}
+.projects-list .project-icons a i {
+  color: white;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.projects-list .project-icons a i:hover {
+  opacity: 0.5;
+}
+.projects-list .project-title {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+  justify-content: center;
+}
+.projects-list p {
+  display: flex;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  justify-content: center;
+}
+.projects-list .project-skills {
+  gap: 0.5rem;
+  margin-top: 1.4rem;
+}
+.projects-list .skills-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  row-gap: 0.5rem;
+}
+.projects-list ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+.projects-list ul li {
+  margin-top: 20px;
+  display: flex;
+  display: list-item;
+}
+
+.project .imagen {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.project .imagen img {
+  display: flex;
+  height: 200px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (min-width: 1px) and (max-width: 803px) {
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+.servicios {
+  padding: 0;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.servicios .box1, .servicios .box2 {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 400px;
+  height: 450px;
+  border-radius: 16px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+.servicios .box1:hover, .servicios .box2:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.servicios .box1 img, .servicios .box2 img {
+  display: flex;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+.servicios .box1 p, .servicios .box2 p {
+  padding: 0.1rem;
+  font-size: 16px;
+  font-weight: 300;
+}
+.servicios .box1 h3, .servicios .box2 h3 {
+  font-weight: 600;
+}
+.servicios .box1 a, .servicios .box2 a {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+.box1, .box2 {
+  background-color: rgb(238, 38, 119);
+  padding: 0%;
+  font-family: "Arvo", serif;
+  font-size: 30px;
+  color: rgb(238, 38, 119);
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+
+/*BOX 2*/
+.box2 {
+  background-color: rgb(0, 206, 203);
+}
+
+.box3 {
+  background-color: rgb(0, 206, 203);
+  padding: 0.5%;
+}
+
+.servicios .box3 {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.servicios .box3 {
+  width: 500px;
+  height: 500px;
+  border-radius: 2rem;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.servicios .box3:hover {
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.servicios .box3 img {
+  width: 450px;
+  height: 450px;
+  border-radius: 1rem;
+}
+
+.servicios {
+  font-family: "Arvo", serif;
+  font-size: 2rem;
+  color: black;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+
+.desc {
+  font-family: "Arvo", serif;
+  font-size: 1rem;
+  color: black;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+
+.listado {
+  display: flex;
+  justify-content: center;
+}
+
+.accordion-body {
+  font-family: "Arvo", serif;
+  font-size: 1rem;
+  color: black;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+
+.swiper {
+  width: 1000px;
+}
+
+.card {
+  position: relative;
+  background-color: pink;
+  border-radius: 20px;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  height: 460px;
+  width: 296px;
+  margin: 20px 50px;
+}
+.card:hover {
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  height: 30%;
+  width: 100%;
+  background-color: black;
+  border-radius: 20px 20px 0 0;
+}
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 100;
+}
+.card .media-icons {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card .media-icons i {
+  color: white;
+  margin-top: 10px;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.card .media-icons i:hover {
+  opacity: 1;
+}
+.card .name-profession {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  color: white;
+}
+.card .name-profession .name {
+  font-size: 20px;
+  font: weight 600px;
+}
+.card .name-profession .profession {
+  font-size: 15px;
+  font: weight 500px;
+}
+.card .rating {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+}
+.card .rating i {
+  font-size: 18px;
+  color: white;
+  margin: 0 2px;
+}
+
+.swiper {
+  width: 950px;
+}
+
+section {
+  position: relative;
+  width: 450;
+  width: 1075 px;
+  display: flex;
+  align-items: center;
+  display: flex;
+}
+
+section .card .image {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  padding: 3px;
+  background: none;
+  display: flex;
+}
+section .card .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid black;
+  background: black;
+}
+
+.swiper-pagination {
+  position: absolute;
+  top: 510px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  opacity: 0.7;
+  color: rgb(0, 206, 203);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  opacity: 1;
+  color: rgb(0, 206, 203);
+}
+
+.encabezado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.encabezado .texto {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.encabezado .texto h1.principal1 {
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+  justify-content: center;
+}
+.encabezado .texto h1.principal1 {
+  display: flex;
+  justify-content: center;
+}
+.encabezado .texto h3.subprincipal1 {
+  display: flex;
+  font-family: "Arvo", serif;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+  justify-content: center;
+}
+.encabezado .redessociales {
+  background-color: rgb(255, 210, 63);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.encabezado .redessociales .logo {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.bequicm {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "emailcontacto " "emailcontacto  ";
+  justify-items: stretch;
+  align-items: stretch;
+  background-color: rgb(238, 38, 119);
+}
+
+.emailcontacto {
+  background-color: rgb(238, 38, 119);
+  grid-area: emailcontacto;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  gap: 3rem;
+}
+
+.emailcontacto {
+  color: white;
+  font-family: "Arvo", serif;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+}
+
+.form {
+  background-color: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arvo", serif;
+  font-size: 18px;
+}
+
+.form {
+  background-color: white;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arvo", serif;
+  font-size: 18px;
+}
+
+h1.contacto {
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+}
+
+h1.contacto {
+  display: flex;
+  justify-content: center;
+}
+
+h3.contacto {
+  font-family: "Arvo", serif;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+}
+
+.inicio {
+  background-color: rgb(238, 38, 119);
+  border-radius: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: "texto1 foto" "texto2 foto";
+}
+.inicio .textoinicio1 {
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(255, 210, 63);
+  display: flex;
+  grid-area: texto1;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.inicio .textoinicio2 {
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(255, 210, 63);
+  display: flex;
+  grid-area: texto2;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.inicio .fotobequi {
+  display: flex;
+  grid-area: foto;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.trabajaconmigoinicio {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: "textocm1" "textocm2";
+  color: rgb(238, 38, 119);
+  font-family: "Arvo", serif;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.trabajaconmigoinicio .trabajaconmigo {
+  display: flex;
+  grid-area: textocm1;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.trabajaconmigoinicio .trabajaconmigosub {
+  display: flex;
+  grid-area: textocm2;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.qservicio {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "logoce logoaud logoases logopc logowd" "textoce textoaud textoases textopc textowd" "texto2ce texto2aud texto2ases texto2pc texto2wd" "botonce botonaud botonases botonpc botonwd";
+  color: rgb(238, 38, 119);
+  font-family: "Arvo", serif;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .logoce {
+  grid-area: logoce;
+  display: flex;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .textoce {
+  display: flex;
+  grid-area: textoce;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .texto2ce {
+  display: flex;
+  grid-area: texto2ce;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .botonce {
+  display: flex;
+  grid-area: botonce;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .logoaud {
+  display: flex;
+  grid-area: logoaud;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .textoaud {
+  grid-area: textoaud;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .texto2aud {
+  display: flex;
+  grid-area: texto2aud;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .botonaud {
+  display: flex;
+  grid-area: botonaud;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .logoases {
+  display: flex;
+  grid-area: logoases;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .textoases {
+  grid-area: textoases;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .texto2ases {
+  display: flex;
+  grid-area: texto2ases;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .botonases {
+  display: flex;
+  grid-area: botonases;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .logopc {
+  display: flex;
+  grid-area: logopc;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .textopc {
+  grid-area: textopc;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .texto2pc {
+  display: flex;
+  grid-area: texto2pc;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .botonpc {
+  display: flex;
+  grid-area: botonpc;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .logowd {
+  display: flex;
+  grid-area: logowd;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .textowd {
+  grid-area: textowd;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .texto2wd {
+  display: flex;
+  grid-area: texto2wd;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.qservicio .botonwd {
+  display: flex;
+  grid-area: botonwd;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+@media (min-width: 400px) and (max-width: 1000px) {
+  .inicio {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .fotobequi {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+@media (min-width: 804px) and (max-width: 1000px) {
+  .qservicio {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "logoce logoaud logoases" "textoce textoaud textoases" "texto2ce texto2aud texto2ases" "botonce botonaud botonases " " logopc logowd ." "textopc textowd ." "texto2pc texto2wd ." "otonpc botonwd .";
+  }
+}
+@media (min-width: 400px) and (max-width: 803px) {
+  .qservicio {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+/*LOGOWATS*/
+div.whatsappicon {
+  position: fixed;
+  bottom: 200px;
+  right: 0;
+}
+div.whatsappicon img {
+  height: 12rem;
+  width: auto;
+}
+div.whatsappicon img:hover {
+  transform: scale(1.2);
+}
+
+/*REDES SOCIALES PIE PAGINA*/
+.logoinferior {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.logoinferior img {
+  height: 100px;
+  width: auto;
+  margin-top: 20px;
+}
+.logoinferior img:hover {
+  transform: scale(1.2);
+}
+
+/*REDES SOCIALES PIE PAGINA*/
+/*derechos reservados*/
+p.CopyRigth {
+  font-family: "Arvo", serif;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: oblique;
+  text-align: center;
+  color: black;
+}/*# sourceMappingURL=style.css.map */

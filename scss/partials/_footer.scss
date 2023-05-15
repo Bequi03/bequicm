@@ -1,0 +1,48 @@
+/*LOGOWATS*/
+div.whatsappicon {
+  position: fixed;
+  bottom: 200px;
+  right: 0;
+
+  img {
+    height: 12rem;
+    width: auto;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+/*REDES SOCIALES PIE PAGINA*/
+.logoinferior {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  img {
+    height: 100px;
+    width: auto;
+    margin-top: 20px;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+
+/*REDES SOCIALES PIE PAGINA*/
+
+.redeswebsicon {
+  @extend %redeswebiconos;
+}
+
+/*derechos reservados*/
+p.CopyRigth {
+  font-family: 'Arvo', serif;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: oblique;
+  text-align: center;
+  color: black;
+}

@@ -1,0 +1,373 @@
+.inicio {
+    background-color: rgb(238 38 119);
+    border-radius: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:
+        "texto1 foto"
+        "texto2 foto";
+
+    .textoinicio1 {
+        padding: 1rem;
+        font-family: 'Arvo', serif;
+        font-size: 20px;
+        font-weight: normal;
+        font-style: none;
+        text-align: center;
+        color: $coloramarillo;
+        display: flex;
+        grid-area: texto1;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .textoinicio2 {
+        padding: 1rem;
+        font-family: 'Arvo', serif;
+        font-size: 20px;
+        font-weight: normal;
+        font-style: none;
+        text-align: center;
+        color: $coloramarillo;
+        display: flex;
+        grid-area: texto2;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .fotobequi {
+        display: flex;
+        grid-area: foto;
+        padding: 0.5rem;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.trabajaconmigoinicio {
+
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:
+        "textocm1"
+        "textocm2";
+    color: $colorrosa;
+    font-family: 'Arvo', serif;
+    font-weight: normal;
+    font-style: none;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    .trabajaconmigo {
+        display: flex;
+        grid-area: textocm1;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .trabajaconmigosub {
+        display: flex;
+        grid-area: textocm2;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+
+
+.qservicio {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "logoce logoaud logoases logopc logowd"
+        "textoce textoaud textoases textopc textowd"
+        "texto2ce texto2aud texto2ases texto2pc texto2wd"
+        "botonce botonaud botonases botonpc botonwd";
+    color: $colorrosa;
+    font-family: 'Arvo', serif;
+    font-weight: normal;
+    font-style: none;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    .logoce {
+        grid-area: logoce;
+        display: flex;
+        padding: 0.5rem;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .textoce {
+        display: flex;
+        grid-area: textoce;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .texto2ce {
+        display: flex;
+        grid-area: texto2ce;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .botonce {
+        display: flex;
+        grid-area: botonce;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .logoaud {
+        display: flex;
+        grid-area: logoaud;
+        padding: 0.5rem;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .textoaud {
+        grid-area: textoaud;
+        display: flex;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .texto2aud {
+        display: flex;
+        grid-area: texto2aud;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .botonaud {
+        display: flex;
+        grid-area: botonaud;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .logoases {
+        display: flex;
+        grid-area: logoases;
+        padding: 0.5rem;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+
+    }
+
+    .textoases {
+        grid-area: textoases;
+        display: flex;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .texto2ases {
+        display: flex;
+        grid-area: texto2ases;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .botonases {
+        display: flex;
+        grid-area: botonases;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .logopc {
+        display: flex;
+        grid-area: logopc;
+        padding: 0.5rem;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+
+    }
+
+    .textopc {
+        grid-area: textopc;
+        display: flex;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .texto2pc {
+        display: flex;
+        grid-area: texto2pc;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .botonpc {
+        display: flex;
+        grid-area: botonpc;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .logowd {
+        display: flex;
+        grid-area: logowd;
+        padding: 0.5rem;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+
+    }
+
+    .textowd {
+        grid-area: textowd;
+        display: flex;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .texto2wd {
+        display: flex;
+        grid-area: texto2wd;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .botonwd {
+        display: flex;
+        grid-area: botonwd;
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    }
+}
+
+
+
+
+@media (min-width: 400px) and (max-width: 1000px) {
+    .inicio {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+    }
+
+    .fotobequi {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
+
+@media (min-width: 804px) and (max-width: 1000px)  {
+    .qservicio {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "logoce logoaud logoases"
+            "textoce textoaud textoases"
+            "texto2ce texto2aud texto2ases"
+            "botonce botonaud botonases "
+            " logopc logowd ."
+            "textopc textowd ."
+            "texto2pc texto2wd ."
+            "otonpc botonwd .";
+        
+            
+    }
+}
+
+@media (min-width: 400px) and (max-width: 803px) {
+    .qservicio {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
