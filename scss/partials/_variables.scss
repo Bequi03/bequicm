@@ -3,22 +3,6 @@ $colorrosa: rgb(238 38 119);
 $coloramarillo: rgb(255 210 63);
 $colorturquesa: rgb(0 206 203);
 
-%redeswebiconos {
-  text-align: center;
-  margin-left: 30px;
-  margin-right: 30px;
-  text-decoration: none;
-  justify-content: space-between;
-
-  img {
-    height: 20px;
-    width: auto;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-  }
-}
-
 %textoprincipal {
   font-family: 'Arvo', serif;
   color: $colorrosa;
@@ -42,5 +26,20 @@ $colorturquesa: rgb(0 206 203);
     font-style: none;
     text-align: center;
     justify-content: center;
+  }
+}
+%whatsappicon {
+  position: fixed;
+  bottom: 200px;
+  right: 0;
+  z-index: 2;
+
+  img {
+    height: 12rem;
+    width: auto;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }

@@ -1,28 +1,37 @@
 /*LOGOWATS*/
 div.whatsappicon {
-  position: fixed;
-  bottom: 200px;
-  right: 0;
-
-  img {
-    height: 12rem;
-    width: auto;
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
+  @extend %whatsappicon
 }
+
+
+.piepagina {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.8fr 0.8fr 0.1fr;
+  grid-template-areas: "logoinferior" "redeswebsicon" "CopyRigth";
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+
 
 /*REDES SOCIALES PIE PAGINA*/
 .logoinferior {
-  display: flex;
+  display: grid;
+  grid-area: logoinferior;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s;
+
   img {
     height: 100px;
     width: auto;
-    margin-top: 20px;
+    margin-top: 50px;
 
     &:hover {
       transform: scale(1.2);
@@ -34,11 +43,72 @@ div.whatsappicon {
 /*REDES SOCIALES PIE PAGINA*/
 
 .redeswebsicon {
-  @extend %redeswebiconos;
+  display: grid;
+  grid-area: redeswebsicon;
+  margin: 0;
+  padding: 0;
+  background: white;
+  justify-content: center;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    li {
+      list-style: none;
+      margin: 0 15px;
+
+      a {
+        position: relative;
+        display: block;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 63px;
+        background: white;
+        border-radius: 50%;
+        font-size: 30px;
+        color: $colorrosa;
+        transition: .5s;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: $coloramarillo;
+          transition: .5s;
+          transform: scale(.9);
+          z-index: -1;
+        }
+
+        &:hover::before {
+          transform: scale(1.1);
+          box-shadow: 0 0 15px  $coloramarillo;
+        }
+
+        &:hover {
+          color:  $coloramarillo;
+          box-shadow: 0 0 5px  $coloramarillo;
+          text-shadow: 0 0 5px  $coloramarillo;
+        }
+      }
+    }
+  }
 }
+
 
 /*derechos reservados*/
 p.CopyRigth {
+  display: grid;
+  grid-area: CopyRigth;
   font-family: 'Arvo', serif;
   font-size: 10px;
   font-weight: normal;

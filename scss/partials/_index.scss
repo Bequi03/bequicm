@@ -1,373 +1,520 @@
+body {
+  background-image: url(../imagenes/fondobequicm.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+
 .inicio {
-    background-color: rgb(238 38 119);
-    border-radius: 16px;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
+  background-color: rgb(238 38 119);
+  border-radius: 16px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas:
+    "texto1 foto"
+    "texto2 foto";
+
+  .textoinicio1 {
     padding: 1rem;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 3fr;
-    grid-template-areas:
-        "texto1 foto"
-        "texto2 foto";
+    font-family: 'Arvo', serif;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: none;
+    text-align: center;
+    color: $coloramarillo;
+    display: flex;
+    grid-area: texto1;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
 
-    .textoinicio1 {
-        padding: 1rem;
-        font-family: 'Arvo', serif;
-        font-size: 20px;
-        font-weight: normal;
-        font-style: none;
-        text-align: center;
-        color: $coloramarillo;
-        display: flex;
-        grid-area: texto1;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
+  .textoinicio2 {
+    padding: 1rem;
+    font-family: 'Arvo', serif;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: none;
+    text-align: center;
+    color: $coloramarillo;
+    display: flex;
+    grid-area: texto2;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
 
-    .textoinicio2 {
-        padding: 1rem;
-        font-family: 'Arvo', serif;
-        font-size: 20px;
-        font-weight: normal;
-        font-style: none;
-        text-align: center;
-        color: $coloramarillo;
-        display: flex;
-        grid-area: texto2;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
-
-    .fotobequi {
-        display: flex;
-        grid-area: foto;
-        padding: 0.5rem;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
+  .fotobequi {
+    display: flex;
+    grid-area: foto;
+    padding: 0.5rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .trabajaconmigoinicio {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 0.5fr;
+  grid-template-rows: 1fr 0.5fr;
+  grid-template-areas:
+    "textocm1"
+    "textocm2";
+  color: $colorrosa;
+  text-decoration: none;
+  font-family: 'Arvo', serif;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    padding: 1rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr;
-    grid-template-areas:
-        "textocm1"
-        "textocm2";
+  .trabajaconmigo {
+    display: flex;
+    grid-area: textocm1;
+    font-size: 70px;
     color: $colorrosa;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    width: 1200px;
+    height: 150px;
+    background: white;
+    border-radius: 25px;
     font-family: 'Arvo', serif;
-    font-weight: normal;
-    font-style: none;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    transition: 1s box-shadow;
+
+    &:hover {
+      box-shadow: 0 5px 35px 0px rgba(0, 0, 0, .1);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 1200px;
+      height: 150px;
+      background: #FDA8CF;
+      border-radius: 25px;
+      z-index: -1;
+      animation: 1s clockwise infinite;
+    }
+
+    &:hover:after {
+      background: #F3CE5E;
+      animation: 2s counterclockwise infinite;
+    }
+
+    @keyframes clockwise {
+      0% {
+        top: -5px;
+        left: 0;
+      }
+
+      12% {
+        top: -2px;
+        left: 2px;
+      }
+
+      25% {
+        top: 0;
+        left: 5px;
+      }
+
+      37% {
+        top: 2px;
+        left: 2px;
+      }
+
+      50% {
+        top: 5px;
+        left: 0;
+      }
+
+      62% {
+        top: 2px;
+        left: -2px;
+      }
+
+      75% {
+        top: 0;
+        left: -5px;
+      }
+
+      87% {
+        top: -2px;
+        left: -2px;
+      }
+
+      100% {
+        top: -5px;
+        left: 0;
+      }
+    }
+
+    @keyframes counterclockwise {
+      0% {
+        top: -5px;
+        right: 0;
+      }
+
+      12% {
+        top: -2px;
+        right: 2px;
+      }
+
+      25% {
+        top: 0;
+        right: 5px;
+      }
+
+      37% {
+        top: 2px;
+        right: 2px;
+      }
+
+      50% {
+        top: 5px;
+        right: 0;
+      }
+
+      62% {
+        top: 2px;
+        right: -2px;
+      }
+
+      75% {
+        top: 0;
+        right: -5px;
+      }
+
+      87% {
+        top: -2px;
+        right: -2px;
+      }
+
+      100% {
+        top: -5px;
+        right: 0;
+      }
+    }
+
+    a {
+      color: $colorrosa;
+      text-decoration: none;
+    }
+
+  }
+
+  .trabajaconmigosub {
+    display: flex;
+    grid-area: textocm2;
+    font-size: 20px;
     text-align: center;
     justify-content: center;
     text-align: center;
     align-items: center;
-
-    .trabajaconmigo {
-        display: flex;
-        grid-area: textocm1;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
-
-    .trabajaconmigosub {
-        display: flex;
-        grid-area: textocm2;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
+  }
 }
 
 
 
 .qservicio {
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.01fr 1fr 0.01fr;
+  grid-template-areas:
+    "logoce logoaud logoases logopc logowd"
+    "textoce textoaud textoases textopc textowd"
+    "texto2ce texto2aud texto2ases texto2pc texto2wd"
+    "botonce botonaud botonases botonpc botonwd";
+  color: $colorrosa;
+  font-family: 'Arvo', serif;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  .logoce {
+    grid-area: logoce;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .textoce {
+    display: flex;
     padding: 1rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "logoce logoaud logoases logopc logowd"
-        "textoce textoaud textoases textopc textowd"
-        "texto2ce texto2aud texto2ases texto2pc texto2wd"
-        "botonce botonaud botonases botonpc botonwd";
-    color: $colorrosa;
-    font-family: 'Arvo', serif;
-    font-weight: normal;
-    font-style: none;
+    grid-area: textoce;
+    font-size: 20px;
     text-align: center;
     justify-content: center;
     text-align: center;
     align-items: center;
 
-    .logoce {
-        grid-area: logoce;
-        display: flex;
-        padding: 0.5rem;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
+  }
 
-    .textoce {
-        display: flex;
-        grid-area: textoce;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-
-    }
-
-    .texto2ce {
-        display: flex;
-        grid-area: texto2ce;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-
-    }
-
-    .botonce {
-        display: flex;
-        grid-area: botonce;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-
-    }
-
-    .logoaud {
-        display: flex;
-        grid-area: logoaud;
-        padding: 0.5rem;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-
-    }
-
-    .textoaud {
-        grid-area: textoaud;
-        display: flex;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
-
-    .texto2aud {
-        display: flex;
-        grid-area: texto2aud;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-
-    }
-
-    .botonaud {
-        display: flex;
-        grid-area: botonaud;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-
-    }
-
-    .logoases {
-        display: flex;
-        grid-area: logoases;
-        padding: 0.5rem;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
+  .texto2ce {
+    display: flex;
+    padding: 1rem;
+    grid-area: texto2ce;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 
 
-    }
+  }
 
-    .textoases {
-        grid-area: textoases;
-        display: flex;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
+  .botonce {
+    display: flex;
+    grid-area: botonce;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 
-    .texto2ases {
-        display: flex;
-        grid-area: texto2ases;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
+  }
 
-    }
+  .logoaud {
+    display: flex;
+    grid-area: logoaud;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 
-    .botonases {
-        display: flex;
-        grid-area: botonases;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
+  }
 
-    .logopc {
-        display: flex;
-        grid-area: logopc;
-        padding: 0.5rem;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
+  .textoaud {
+    grid-area: textoaud;
+    padding: 1rem;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
 
+  .texto2aud {
+    padding: 1rem;
+    display: flex;
+    grid-area: texto2aud;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 
-    }
+  }
 
-    .textopc {
-        grid-area: textopc;
-        display: flex;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
+  .botonaud {
+    display: flex;
+    grid-area: botonaud;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 
-    .texto2pc {
-        display: flex;
-        grid-area: texto2pc;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
+  }
 
-    }
-
-    .botonpc {
-        display: flex;
-        grid-area: botonpc;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-
-    }
-
-    .logowd {
-        display: flex;
-        grid-area: logowd;
-        padding: 0.5rem;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
+  .logoases {
+    display: flex;
+    grid-area: logoases;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 
 
-    }
+  }
 
-    .textowd {
-        grid-area: textowd;
-        display: flex;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
+  .textoases {
+    grid-area: textoases;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
 
-    .texto2wd {
-        display: flex;
-        grid-area: texto2wd;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
+  .texto2ases {
+    display: flex;
+    padding: 1rem;
+    grid-area: texto2ases;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 
-    }
+  }
 
-    .botonwd {
-        display: flex;
-        grid-area: botonwd;
-        font-size: 20px;
-        text-align: center;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
+  .botonases {
+    display: flex;
+    grid-area: botonases;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
 
-    }
+  .logopc {
+    display: flex;
+    grid-area: logopc;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+
+  }
+
+  .textopc {
+    grid-area: textopc;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .texto2pc {
+    display: flex;
+    padding: 1rem;
+    grid-area: texto2pc;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+  }
+
+  .botonpc {
+    display: flex;
+    grid-area: botonpc;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+  }
+
+  .logowd {
+    display: flex;
+    grid-area: logowd;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+
+  }
+
+  .textowd {
+    grid-area: textowd;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .texto2wd {
+    display: flex;
+    padding: 1rem;
+    grid-area: texto2wd;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+  }
+
+  .botonwd {
+    display: flex;
+    grid-area: botonwd;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+  }
 }
 
 
 
 
 @media (min-width: 400px) and (max-width: 1000px) {
-    .inicio {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
+  .inicio {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 
-    }
+  }
 
-    .fotobequi {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
+  .fotobequi {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
 }
 
-@media (min-width: 804px) and (max-width: 1000px)  {
-    .qservicio {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "logoce logoaud logoases"
-            "textoce textoaud textoases"
-            "texto2ce texto2aud texto2ases"
-            "botonce botonaud botonases "
-            " logopc logowd ."
-            "textopc textowd ."
-            "texto2pc texto2wd ."
-            "otonpc botonwd .";
-        
-            
-    }
+@media (min-width: 804px) and (max-width: 1000px) {
+  .qservicio {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "logoce logoaud logoases"
+      "textoce textoaud textoases"
+      "texto2ce texto2aud texto2ases"
+      "botonce botonaud botonases "
+      " logopc logowd ."
+      "textopc textowd ."
+      "texto2pc texto2wd ."
+      "otonpc botonwd .";
+
+
+  }
 }
 
 @media (min-width: 400px) and (max-width: 803px) {
-    .qservicio {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
+  .qservicio {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
 }

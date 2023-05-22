@@ -1,5 +1,6 @@
 .texto {
-  @extend %textoprincipal }
+  @extend %textoprincipal
+}
 
 .swiper {
   width: 1000px;
@@ -7,7 +8,7 @@
 
 .card {
   position: relative;
-  background-color: pink;
+  background-color: white;
   border-radius: 20px;
   font-family: 'Arvo', serif;
   letter-spacing: 0.03em;
@@ -16,6 +17,7 @@
   width: 296px;
   margin: 20px 50px;
   
+
   &:hover {
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
   }
@@ -25,7 +27,7 @@
     position: absolute;
     height: 30%;
     width: 100%;
-    background-color: black;
+    background-color: $colorrosa;
     border-radius: 20px 20px 0 0;
   }
 
@@ -52,18 +54,18 @@
       opacity: 0.6;
       transition: all 0.3s ease;
       cursor: pointer;
-
       &:hover {
         opacity: 1;
       }
     }
   }
+
   .name-profession {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
-    color: white;
+    color: $colorrosa;
 
 
     .name {
@@ -85,16 +87,17 @@
 
     i {
       font-size: 18px;
-      color: white;
+      color: $colorrosa;
       margin: 0 2px;
     }
   }
 }
-.swiper{
+
+.swiper {
   width: 950px;
 }
 
-section{
+section {
   position: relative;
   width: 450;
   width: 1075 px;
@@ -110,27 +113,58 @@ section .card .image {
   padding: 3px;
   background: none;
   display: flex;
- img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid black;
-  background: black;
-}
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid $coloramarillo;
+    background: $coloramarillo;
+  }
 }
 
-.swiper-pagination{
-position: absolute;
-top: 510px;
+.swiper-pagination {
+  position: absolute;
+  top: 510px;
 }
-.swiper-button-next, .swiper-button-prev {
+
+.swiper-button-next,
+.swiper-button-prev {
   opacity: 0.7;
   color: $colorturquesa;
   transition: all 0.3s ease;
 }
-.swiper-button-next:hover, .swiper-button-prev:hover {
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
   opacity: 1;
   color: $colorturquesa;
-
 }
+
+
+  
+.form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arvo', serif;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

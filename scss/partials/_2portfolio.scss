@@ -9,6 +9,9 @@
   gap: 2rem;
 
   .project {
+    font-family: 'Arvo', serif;
+     font-size: 20px;
+     color: $coloramarillo;
     background-color: $colorrosa;
     padding: 2rem;
     border-radius: 0.25rem;
@@ -37,7 +40,6 @@
         transition: all 0.3s ease;
         cursor: pointer;
         margin-top: 20px;
-        margin-right: 20px;
         margin-bottom: 20px;
 
         &:hover {
@@ -51,8 +53,7 @@
 
   .project-title {
     display: flex;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+   
     transition: .2s;
     justify-content: center;
   }
@@ -68,11 +69,12 @@
 
   .project-skills {
     gap: 0.5rem;
-    margin-top: 1.4rem;
-  }
+    justify-content: center;
+    display: flex;
+    
+     }
 
   .skills-list {
-    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -85,6 +87,7 @@
     display: flex;
     list-style-type: none;
     justify-content: center;
+
 
     li {
       margin-top: 20px;
@@ -111,6 +114,12 @@
     object-fit: cover;
     border-radius: 50%;
   }
+}
+
+
+.projects-list .project2 {
+  @extend .project;
+  background-color: $colorturquesa;
 }
 
 

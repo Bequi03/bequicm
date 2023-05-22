@@ -1,19 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
-.redeswebsicon {
-  text-align: center;
-  margin-left: 30px;
-  margin-right: 30px;
-  text-decoration: none;
-  justify-content: space-between;
-}
-.redeswebsicon img {
-  height: 20px;
-  width: auto;
-  margin-top: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
 .texto, .bequicmwd {
   font-family: "Arvo", serif;
   color: rgb(238, 38, 119);
@@ -38,9 +23,33 @@
   justify-content: center;
 }
 
+div.whatsappicon {
+  position: fixed;
+  bottom: 200px;
+  right: 0;
+  z-index: 2;
+}
+div.whatsappicon img {
+  height: 12rem;
+  width: auto;
+}
+div.whatsappicon img:hover {
+  transform: scale(1.2);
+}
+
+body {
+  background-image: url(../imagenes/fondobequicm.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  justify-content: center;
+  height: 100vh;
+}
+
 .inicio {
   background-color: rgb(238, 38, 119);
   border-radius: 16px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -90,11 +99,11 @@
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  padding: 1rem;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-columns: 0.5fr;
+  grid-template-rows: 1fr 0.5fr;
   grid-template-areas: "textocm1" "textocm2";
   color: rgb(238, 38, 119);
+  text-decoration: none;
   font-family: "Arvo", serif;
   font-weight: normal;
   font-style: none;
@@ -106,11 +115,119 @@
 .trabajaconmigoinicio .trabajaconmigo {
   display: flex;
   grid-area: textocm1;
-  font-size: 20px;
-  text-align: center;
-  justify-content: center;
-  text-align: center;
+  font-size: 70px;
+  color: rgb(238, 38, 119);
+  text-decoration: none;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto;
+  width: 1200px;
+  height: 150px;
+  background: white;
+  border-radius: 25px;
+  font-family: "Arvo", serif;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+}
+.trabajaconmigoinicio .trabajaconmigo:hover {
+  box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
+}
+.trabajaconmigoinicio .trabajaconmigo:hover::before, .trabajaconmigoinicio .trabajaconmigo:hover::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 1200px;
+  height: 150px;
+  background: #FDA8CF;
+  border-radius: 25px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+.trabajaconmigoinicio .trabajaconmigo:hover:after {
+  background: #F3CE5E;
+  animation: 2s counterclockwise infinite;
+}
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;
+  }
+}
+.trabajaconmigoinicio .trabajaconmigo a {
+  color: rgb(238, 38, 119);
+  text-decoration: none;
 }
 .trabajaconmigoinicio .trabajaconmigosub {
   display: flex;
@@ -123,12 +240,13 @@
 }
 
 .qservicio {
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  padding: 1rem;
+  padding: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.01fr 1fr 0.01fr;
   grid-template-areas: "logoce logoaud logoases logopc logowd" "textoce textoaud textoases textopc textowd" "texto2ce texto2aud texto2ases texto2pc texto2wd" "botonce botonaud botonases botonpc botonwd";
   color: rgb(238, 38, 119);
   font-family: "Arvo", serif;
@@ -142,13 +260,13 @@
 .qservicio .logoce {
   grid-area: logoce;
   display: flex;
-  padding: 0.5rem;
   justify-content: center;
   text-align: center;
   align-items: center;
 }
 .qservicio .textoce {
   display: flex;
+  padding: 1rem;
   grid-area: textoce;
   font-size: 20px;
   text-align: center;
@@ -158,6 +276,7 @@
 }
 .qservicio .texto2ce {
   display: flex;
+  padding: 1rem;
   grid-area: texto2ce;
   font-size: 20px;
   text-align: center;
@@ -177,13 +296,13 @@
 .qservicio .logoaud {
   display: flex;
   grid-area: logoaud;
-  padding: 0.5rem;
   justify-content: center;
   text-align: center;
   align-items: center;
 }
 .qservicio .textoaud {
   grid-area: textoaud;
+  padding: 1rem;
   display: flex;
   font-size: 20px;
   text-align: center;
@@ -192,6 +311,7 @@
   align-items: center;
 }
 .qservicio .texto2aud {
+  padding: 1rem;
   display: flex;
   grid-area: texto2aud;
   font-size: 20px;
@@ -212,7 +332,6 @@
 .qservicio .logoases {
   display: flex;
   grid-area: logoases;
-  padding: 0.5rem;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -228,6 +347,7 @@
 }
 .qservicio .texto2ases {
   display: flex;
+  padding: 1rem;
   grid-area: texto2ases;
   font-size: 20px;
   text-align: center;
@@ -247,7 +367,6 @@
 .qservicio .logopc {
   display: flex;
   grid-area: logopc;
-  padding: 0.5rem;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -263,6 +382,7 @@
 }
 .qservicio .texto2pc {
   display: flex;
+  padding: 1rem;
   grid-area: texto2pc;
   font-size: 20px;
   text-align: center;
@@ -282,7 +402,6 @@
 .qservicio .logowd {
   display: flex;
   grid-area: logowd;
-  padding: 0.5rem;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -298,6 +417,7 @@
 }
 .qservicio .texto2wd {
   display: flex;
+  padding: 1rem;
   grid-area: texto2wd;
   font-size: 20px;
   text-align: center;
@@ -427,7 +547,7 @@
   transition: 0.5s;
 }
 
-.descripcion {
+.inicio {
   background-color: rgb(238, 38, 119);
   border-radius: 16px;
   width: 1200px;
@@ -436,24 +556,10 @@
   display: grid;
   padding: 1rem;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "textodescripcion fotodesc";
-  color: rgb(255, 210, 63);
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: "texto1 foto" "texto2 foto";
 }
-.descripcion .fotodesc {
-  display: flex;
-  grid-area: fotodesc;
-  padding: 0.5rem;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-.descripcion .textodescripcion {
-  display: flex;
-  grid-area: textodescripcion;
+.inicio .textoinicio1 {
   padding: 1rem;
   font-family: "Arvo", serif;
   font-size: 20px;
@@ -461,6 +567,30 @@
   font-style: none;
   text-align: center;
   color: rgb(255, 210, 63);
+  display: flex;
+  grid-area: texto1;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.inicio .textoinicio2 {
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(255, 210, 63);
+  display: flex;
+  grid-area: texto2;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.inicio .fotobequi {
+  display: flex;
+  grid-area: foto;
+  padding: 0.5rem;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -480,10 +610,16 @@
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  padding: 1rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "dedondefoto dedondequeestfoto dedondecmfoto dedondewdfoto " "dedondetexto dedondequeesttex dedondecmtexto dedondewdtexto" "dedondedesc dedondequeestdesc dedondecmtexto2 dedondewdtexto2";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 120px 110px;
+  grid-template-areas: "dedondefoto dedondequeestfoto dedondecmfoto dedondewdfoto hobbiesfoto" "dedondetexto dedondequeesttex dedondecmtexto dedondewdtexto hobbiestexto" "dedondedesc dedondequeestdesc dedondecmtexto2 dedondewdtexto2  hobbiestexto2";
+  justify-content: center;
+  color: rgb(238, 38, 119);
+  text-decoration: none;
+  font-family: "Arvo", serif;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -632,6 +768,42 @@
   text-align: center;
   align-items: center;
 }
+.encabezadoport .hobbiesfoto {
+  display: flex;
+  grid-area: hobbiesfoto;
+  padding: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .hobbiestexto {
+  display: flex;
+  grid-area: hobbiestexto;
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.encabezadoport .hobbiestexto2 {
+  display: flex;
+  grid-area: hobbiestexto2;
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(238, 38, 119);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
 
 .projects-list {
   padding-inline: 9rem;
@@ -639,7 +811,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-.projects-list .project {
+.projects-list .project, .projects-list .project2 {
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  color: rgb(255, 210, 63);
   background-color: rgb(238, 38, 119);
   padding: 2rem;
   border-radius: 0.25rem;
@@ -667,7 +842,6 @@
   transition: all 0.3s ease;
   cursor: pointer;
   margin-top: 20px;
-  margin-right: 20px;
   margin-bottom: 20px;
 }
 .projects-list .project-icons a i:hover {
@@ -675,8 +849,6 @@
 }
 .projects-list .project-title {
   display: flex;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
   transition: 0.2s;
   justify-content: center;
 }
@@ -694,10 +866,10 @@
 }
 .projects-list .project-skills {
   gap: 0.5rem;
-  margin-top: 1.4rem;
+  justify-content: center;
+  display: flex;
 }
 .projects-list .skills-list {
-  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -717,19 +889,23 @@
   display: list-item;
 }
 
-.project .imagen {
+.project .imagen, .projects-list .project2 .imagen {
   display: flex;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s;
 }
-.project .imagen img {
+.project .imagen img, .projects-list .project2 .imagen img {
   display: flex;
   height: 200px;
   width: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+}
+
+.projects-list .project2 {
+  background-color: rgb(0, 206, 203);
 }
 
 @media (min-width: 1px) and (max-width: 803px) {
@@ -834,8 +1010,8 @@
 }
 
 .servicios .box3 {
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
   border-radius: 2rem;
   box-shadow: 0 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -849,8 +1025,8 @@
 }
 
 .servicios .box3 img {
-  width: 450px;
-  height: 450px;
+  width: 250px;
+  height: 250px;
   border-radius: 1rem;
 }
 
@@ -889,13 +1065,87 @@
   font-style: none;
 }
 
+.servicios {
+  padding: 0;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.servicios .box5 {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 400px;
+  height: 450px;
+  border-radius: 16px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+.servicios .box5:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.servicios .box5 img {
+  display: flex;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+.servicios .box5 p {
+  padding: 0.1rem;
+  font-size: 16px;
+  font-weight: 300;
+}
+.servicios .box5 h3 {
+  font-weight: 600;
+}
+.servicios .box5 a {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+.box5 {
+  background-color: rgb(238, 38, 119);
+  padding: 0%;
+  font-family: "Arvo", serif;
+  font-size: 30px;
+  color: rgb(238, 38, 119);
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+
 .swiper {
   width: 1000px;
 }
 
 .card {
   position: relative;
-  background-color: pink;
+  background-color: white;
   border-radius: 20px;
   font-family: "Arvo", serif;
   letter-spacing: 0.03em;
@@ -912,7 +1162,7 @@
   position: absolute;
   height: 30%;
   width: 100%;
-  background-color: black;
+  background-color: rgb(238, 38, 119);
   border-radius: 20px 20px 0 0;
 }
 .card .card-content {
@@ -946,7 +1196,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
-  color: white;
+  color: rgb(238, 38, 119);
 }
 .card .name-profession .name {
   font-size: 20px;
@@ -963,7 +1213,7 @@
 }
 .card .rating i {
   font-size: 18px;
-  color: white;
+  color: rgb(238, 38, 119);
   margin: 0 2px;
 }
 
@@ -994,8 +1244,8 @@ section .card .image img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  border: 3px solid black;
-  background: black;
+  border: 3px solid rgb(255, 210, 63);
+  background: rgb(255, 210, 63);
 }
 
 .swiper-pagination {
@@ -1003,15 +1253,25 @@ section .card .image img {
   top: 510px;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   opacity: 0.7;
   color: rgb(0, 206, 203);
   transition: all 0.3s ease;
 }
 
-.swiper-button-next:hover, .swiper-button-prev:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
   opacity: 1;
   color: rgb(0, 206, 203);
+}
+
+.form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arvo", serif;
+  font-size: 18px;
 }
 
 .encabezado {
@@ -1095,7 +1355,6 @@ section .card .image img {
 }
 
 .form {
-  background-color: white;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -1103,8 +1362,129 @@ section .card .image img {
   font-size: 18px;
 }
 
+.descargables {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.descargables .descargas {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  color: rgb(238, 38, 119);
+  margin: 10px auto;
+  width: 250px;
+  height: 250px;
+  background: white;
+  border-radius: 75px;
+  border: 0.1px solid rgb(0, 206, 203);
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+  pad: 1rem;
+}
+.descargables .descargas:hover {
+  box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
+}
+.descargables .descargas:hover::before, .descargables .descargas:hover::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #FDA8CF;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+.descargables .descargas:hover:after {
+  background: #F3CE5E;
+  animation: 2s counterclockwise infinite;
+}
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;
+  }
+}
+
 .form {
-  background-color: white;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -1135,9 +1515,19 @@ h3.contacto {
   color: rgb(238, 38, 119);
 }
 
+body {
+  background-image: url(../imagenes/fondobequicm.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  justify-content: center;
+  height: 100vh;
+}
+
 .inicio {
   background-color: rgb(238, 38, 119);
   border-radius: 16px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -1187,11 +1577,11 @@ h3.contacto {
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  padding: 1rem;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-columns: 0.5fr;
+  grid-template-rows: 1fr 0.5fr;
   grid-template-areas: "textocm1" "textocm2";
   color: rgb(238, 38, 119);
+  text-decoration: none;
   font-family: "Arvo", serif;
   font-weight: normal;
   font-style: none;
@@ -1203,11 +1593,119 @@ h3.contacto {
 .trabajaconmigoinicio .trabajaconmigo {
   display: flex;
   grid-area: textocm1;
-  font-size: 20px;
-  text-align: center;
-  justify-content: center;
-  text-align: center;
+  font-size: 70px;
+  color: rgb(238, 38, 119);
+  text-decoration: none;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto;
+  width: 1200px;
+  height: 150px;
+  background: white;
+  border-radius: 25px;
+  font-family: "Arvo", serif;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+}
+.trabajaconmigoinicio .trabajaconmigo:hover {
+  box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
+}
+.trabajaconmigoinicio .trabajaconmigo:hover::before, .trabajaconmigoinicio .trabajaconmigo:hover::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 1200px;
+  height: 150px;
+  background: #FDA8CF;
+  border-radius: 25px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+.trabajaconmigoinicio .trabajaconmigo:hover:after {
+  background: #F3CE5E;
+  animation: 2s counterclockwise infinite;
+}
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;
+  }
+}
+.trabajaconmigoinicio .trabajaconmigo a {
+  color: rgb(238, 38, 119);
+  text-decoration: none;
 }
 .trabajaconmigoinicio .trabajaconmigosub {
   display: flex;
@@ -1220,12 +1718,13 @@ h3.contacto {
 }
 
 .qservicio {
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  padding: 1rem;
+  padding: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.01fr 1fr 0.01fr;
   grid-template-areas: "logoce logoaud logoases logopc logowd" "textoce textoaud textoases textopc textowd" "texto2ce texto2aud texto2ases texto2pc texto2wd" "botonce botonaud botonases botonpc botonwd";
   color: rgb(238, 38, 119);
   font-family: "Arvo", serif;
@@ -1239,13 +1738,13 @@ h3.contacto {
 .qservicio .logoce {
   grid-area: logoce;
   display: flex;
-  padding: 0.5rem;
   justify-content: center;
   text-align: center;
   align-items: center;
 }
 .qservicio .textoce {
   display: flex;
+  padding: 1rem;
   grid-area: textoce;
   font-size: 20px;
   text-align: center;
@@ -1255,6 +1754,7 @@ h3.contacto {
 }
 .qservicio .texto2ce {
   display: flex;
+  padding: 1rem;
   grid-area: texto2ce;
   font-size: 20px;
   text-align: center;
@@ -1274,13 +1774,13 @@ h3.contacto {
 .qservicio .logoaud {
   display: flex;
   grid-area: logoaud;
-  padding: 0.5rem;
   justify-content: center;
   text-align: center;
   align-items: center;
 }
 .qservicio .textoaud {
   grid-area: textoaud;
+  padding: 1rem;
   display: flex;
   font-size: 20px;
   text-align: center;
@@ -1289,6 +1789,7 @@ h3.contacto {
   align-items: center;
 }
 .qservicio .texto2aud {
+  padding: 1rem;
   display: flex;
   grid-area: texto2aud;
   font-size: 20px;
@@ -1309,7 +1810,6 @@ h3.contacto {
 .qservicio .logoases {
   display: flex;
   grid-area: logoases;
-  padding: 0.5rem;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -1325,6 +1825,7 @@ h3.contacto {
 }
 .qservicio .texto2ases {
   display: flex;
+  padding: 1rem;
   grid-area: texto2ases;
   font-size: 20px;
   text-align: center;
@@ -1344,7 +1845,6 @@ h3.contacto {
 .qservicio .logopc {
   display: flex;
   grid-area: logopc;
-  padding: 0.5rem;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -1360,6 +1860,7 @@ h3.contacto {
 }
 .qservicio .texto2pc {
   display: flex;
+  padding: 1rem;
   grid-area: texto2pc;
   font-size: 20px;
   text-align: center;
@@ -1379,7 +1880,6 @@ h3.contacto {
 .qservicio .logowd {
   display: flex;
   grid-area: logowd;
-  padding: 0.5rem;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -1395,6 +1895,7 @@ h3.contacto {
 }
 .qservicio .texto2wd {
   display: flex;
+  padding: 1rem;
   grid-area: texto2wd;
   font-size: 20px;
   text-align: center;
@@ -1439,22 +1940,24 @@ h3.contacto {
   }
 }
 /*LOGOWATS*/
-div.whatsappicon {
-  position: fixed;
-  bottom: 200px;
-  right: 0;
-}
-div.whatsappicon img {
-  height: 12rem;
-  width: auto;
-}
-div.whatsappicon img:hover {
-  transform: scale(1.2);
+.piepagina {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.8fr 0.8fr 0.1fr;
+  grid-template-areas: "logoinferior" "redeswebsicon" "CopyRigth";
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 /*REDES SOCIALES PIE PAGINA*/
 .logoinferior {
-  display: flex;
+  display: grid;
+  grid-area: logoinferior;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s;
@@ -1462,15 +1965,73 @@ div.whatsappicon img:hover {
 .logoinferior img {
   height: 100px;
   width: auto;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .logoinferior img:hover {
   transform: scale(1.2);
 }
 
 /*REDES SOCIALES PIE PAGINA*/
+.redeswebsicon {
+  display: grid;
+  grid-area: redeswebsicon;
+  margin: 0;
+  padding: 0;
+  background: white;
+  justify-content: center;
+}
+.redeswebsicon ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.redeswebsicon ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+.redeswebsicon ul li a {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: white;
+  border-radius: 50%;
+  font-size: 30px;
+  color: rgb(238, 38, 119);
+  transition: 0.5s;
+}
+.redeswebsicon ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgb(255, 210, 63);
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
+}
+.redeswebsicon ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgb(255, 210, 63);
+}
+.redeswebsicon ul li a:hover {
+  color: rgb(255, 210, 63);
+  box-shadow: 0 0 5px rgb(255, 210, 63);
+  text-shadow: 0 0 5px rgb(255, 210, 63);
+}
+
 /*derechos reservados*/
 p.CopyRigth {
+  display: grid;
+  grid-area: CopyRigth;
   font-family: "Arvo", serif;
   font-size: 10px;
   font-weight: normal;
