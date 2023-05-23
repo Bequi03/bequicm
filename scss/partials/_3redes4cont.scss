@@ -1,4 +1,7 @@
-.servicios1 {
+.delegaredes {
+  @extend  %delegaredes
+}
+.servicios2 {
   padding: 0;
   font-family: 'Arvo', serif;
   letter-spacing: 0.03em;
@@ -8,8 +11,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
-
-  .box4 {
+  .box5 {
     background-color: $colorturquesa;
     display: flex;
     width: 100%;
@@ -18,25 +20,23 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 600px;
     border-radius: 16px;
     box-shadow: 0 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     margin: 20px;
     text-align: center;
     transition: all 0.25s;
-
-
+    
     img {
       display: flex;
-      width: 300px;
-      height: 300px;
+      width: 250px;
+      height: 550px;
       border-radius: 10px;
     }
-
+     
   }
-
   .servicionombre {
     font-family: 'Arvo', serif;
     font-size: 2rem;
@@ -46,40 +46,29 @@
     font-weight: bold;
     font-style: none;
   }
-
-  .descripcionservicio {
-    font-family: 'Arvo', serif;
-    font-size: 1rem;
-    color: black;
-    font-style: none;
-    text-align: center;
-    font-weight: bold;
-    font-style: none;
-  }
-
-  .listado {
-    display: flex;
-    justify-content: center;
-  }
-
-  .accordion-body {
-    font-family: 'Arvo', serif;
-    font-size: 1rem;
-    color: black;
-    font-style: none;
-    text-align: center;
-    font-weight: bold;
-    font-style: none;
-  }
-
-  .botonwd {
-    display: flex;
-    padding: 1rem;
-    justify-content: center;
-
-  }
+.descripcionservicio {
+  font-family: 'Arvo', serif;
+  font-size: 1rem;
+  color: black;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
 }
 
-.trabajaconmigoinicio {
-  @extend %delegaredes
+.listado {
+  display: flex;
+  justify-content: center;
 }
+}
+  
+.botonpago {
+  font-family: 'Arvo', serif;
+  font-size: 3rem;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+
+}
+
+

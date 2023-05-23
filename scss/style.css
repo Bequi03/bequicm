@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
+body {
+  background-image: url(../imagenes/fondobequicm.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  justify-content: center;
+  height: 100vh;
+}
+
 .texto, .bequicmwd {
   font-family: "Arvo", serif;
   color: rgb(238, 38, 119);
@@ -37,65 +46,17 @@ div.whatsappicon img:hover {
   transform: scale(1.2);
 }
 
-body {
-  background-image: url(../imagenes/fondobequicm.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  justify-content: center;
-  height: 100vh;
-}
-
-.inicio {
-  background-color: rgb(238, 38, 119);
-  border-radius: 16px;
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  padding: 1rem;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 3fr;
-  grid-template-areas: "texto1 foto" "texto2 foto";
-}
-.inicio .textoinicio1 {
-  padding: 1rem;
+.trabajaconmigoinicio, .trabajaconmigo, .delegaredes {
   font-family: "Arvo", serif;
-  font-size: 20px;
-  font-weight: normal;
+  font-size: 1rem;
+  color: rgb(238, 38, 119);
   font-style: none;
   text-align: center;
-  color: rgb(255, 210, 63);
-  display: flex;
-  grid-area: texto1;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-.inicio .textoinicio2 {
-  padding: 1rem;
-  font-family: "Arvo", serif;
-  font-size: 20px;
-  font-weight: normal;
+  font-weight: bold;
   font-style: none;
-  text-align: center;
-  color: rgb(255, 210, 63);
-  display: flex;
-  grid-area: texto2;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-.inicio .fotobequi {
-  display: flex;
-  grid-area: foto;
-  padding: 0.5rem;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
 }
 
-.trabajaconmigoinicio {
+.delegaredes {
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -112,10 +73,19 @@ body {
   text-align: center;
   align-items: center;
 }
-.trabajaconmigoinicio .trabajaconmigo {
+.delegaredes .delegaredessub {
+  display: flex;
+  grid-area: textocm2;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.delegaredes .delegaredes {
   display: flex;
   grid-area: textocm1;
-  font-size: 70px;
+  font-size: 30px;
   color: rgb(238, 38, 119);
   text-decoration: none;
   align-items: center;
@@ -123,7 +93,7 @@ body {
   position: relative;
   margin: 20px auto;
   width: 1200px;
-  height: 150px;
+  height: 90px;
   background: white;
   border-radius: 25px;
   font-family: "Arvo", serif;
@@ -131,21 +101,21 @@ body {
   letter-spacing: 2px;
   transition: 1s box-shadow;
 }
-.trabajaconmigoinicio .trabajaconmigo:hover {
+.delegaredes .delegaredes:hover {
   box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
 }
-.trabajaconmigoinicio .trabajaconmigo:hover::before, .trabajaconmigoinicio .trabajaconmigo:hover::after {
+.delegaredes .delegaredes:hover::before, .delegaredes .delegaredes:hover::after {
   display: block;
   content: "";
   position: absolute;
   width: 1200px;
-  height: 150px;
+  height: 90px;
   background: #FDA8CF;
   border-radius: 25px;
   z-index: -1;
   animation: 1s clockwise infinite;
 }
-.trabajaconmigoinicio .trabajaconmigo:hover:after {
+.delegaredes .delegaredes:hover:after {
   background: #F3CE5E;
   animation: 2s counterclockwise infinite;
 }
@@ -225,15 +195,55 @@ body {
     right: 0;
   }
 }
-.trabajaconmigoinicio .trabajaconmigo a {
+.delegaredes .delegaredes a {
   color: rgb(238, 38, 119);
   text-decoration: none;
 }
-.trabajaconmigoinicio .trabajaconmigosub {
-  display: flex;
-  grid-area: textocm2;
+
+.inicio {
+  background-color: rgb(238, 38, 119);
+  border-radius: 16px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas: "texto1 foto" "texto2 foto";
+}
+.inicio .textoinicio1 {
+  padding: 1rem;
+  font-family: "Arvo", serif;
   font-size: 20px;
+  font-weight: normal;
+  font-style: none;
   text-align: center;
+  color: rgb(255, 210, 63);
+  display: flex;
+  grid-area: texto1;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.inicio .textoinicio2 {
+  padding: 1rem;
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  color: rgb(255, 210, 63);
+  display: flex;
+  grid-area: texto2;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.inicio .fotobequi {
+  display: flex;
+  grid-area: foto;
+  padding: 0.5rem;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -536,15 +546,30 @@ body {
 }
 
 .submenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Arvo", serif;
+  font-weight: normal;
+  font-style: none;
+  text-align: center;
+  font-size: 1rem;
+  --bs-navbar-color: rgba(255, 255, 255);
   background-color: rgb(255, 210, 63);
   list-style-type: none;
-  padding: 1rem;
+  padding: 10px;
   position: absolute;
   top: 100%;
   padding-top: 2rem;
   opacity: 0;
   visibility: hidden;
   transition: 0.5s;
+  z-index: 2;
+  color: white;
+}
+.submenu a:hover {
+  color: rgb(238, 38, 119);
 }
 
 .inicio {
@@ -806,15 +831,28 @@ body {
 }
 
 .projects-list {
+  width: 1200px;
   padding-inline: 9rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  padding: 0;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 .projects-list .project, .projects-list .project2 {
   font-family: "Arvo", serif;
-  font-size: 20px;
+  font-size: 15px;
   color: rgb(255, 210, 63);
+  width: 350px;
+  height: 450px;
+  overflow: hidden;
   background-color: rgb(238, 38, 119);
   padding: 2rem;
   border-radius: 0.25rem;
@@ -829,7 +867,7 @@ body {
 .projects-list .project-icons a {
   color: white;
   transition: 0.2s;
-  gap: 1rem;
+  gap: 0.5rem;
   text-align: center;
   font-size: 50px;
   margin-left: 30px;
@@ -849,13 +887,12 @@ body {
 }
 .projects-list .project-title {
   display: flex;
+  font-size: 18px;
   transition: 0.2s;
   justify-content: center;
 }
 .projects-list p {
   display: flex;
-  -webkit-margin-before: 1em;
-          margin-block-start: 1em;
   -webkit-margin-after: 1em;
           margin-block-end: 1em;
   -webkit-margin-start: 0px;
@@ -874,17 +911,19 @@ body {
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
+  justify-content: center;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
-  row-gap: 0.5rem;
+  row-gap: 0.1rem;
 }
 .projects-list ul {
   display: flex;
   list-style-type: none;
   justify-content: center;
+  padding-left: 0px;
 }
 .projects-list ul li {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   display: list-item;
 }
@@ -897,8 +936,8 @@ body {
 }
 .project .imagen img, .projects-list .project2 .imagen img {
   display: flex;
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -994,78 +1033,7 @@ body {
   background-color: rgb(0, 206, 203);
 }
 
-.box3 {
-  background-color: rgb(0, 206, 203);
-  padding: 0.5%;
-}
-
-.servicios .box3 {
-  display: flex;
-  width: 100%;
-  max-width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.servicios .box3 {
-  width: 300px;
-  height: 300px;
-  border-radius: 2rem;
-  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  margin: 20px;
-  text-align: center;
-  transition: all 0.25s;
-}
-
-.servicios .box3:hover {
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-}
-
-.servicios .box3 img {
-  width: 250px;
-  height: 250px;
-  border-radius: 1rem;
-}
-
-.servicios {
-  font-family: "Arvo", serif;
-  font-size: 2rem;
-  color: black;
-  font-style: none;
-  text-align: center;
-  font-weight: bold;
-  font-style: none;
-}
-
-.desc {
-  font-family: "Arvo", serif;
-  font-size: 1rem;
-  color: black;
-  font-style: none;
-  text-align: center;
-  font-weight: bold;
-  font-style: none;
-}
-
-.listado {
-  display: flex;
-  justify-content: center;
-}
-
-.accordion-body {
-  font-family: "Arvo", serif;
-  font-size: 1rem;
-  color: black;
-  font-style: none;
-  text-align: center;
-  font-weight: bold;
-  font-style: none;
-}
-
-.servicios {
+.servicios1 {
   padding: 0;
   font-family: "Arvo", serif;
   letter-spacing: 0.03em;
@@ -1076,7 +1044,8 @@ body {
   display: flex;
   justify-content: center;
 }
-.servicios .box5 {
+.servicios1 .box4 {
+  background-color: rgb(0, 206, 203);
   display: flex;
   width: 100%;
   max-width: 100%;
@@ -1085,7 +1054,7 @@ body {
   align-items: center;
   display: flex;
   width: 400px;
-  height: 450px;
+  height: 400px;
   border-radius: 16px;
   box-shadow: 0 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -1093,50 +1062,311 @@ body {
   text-align: center;
   transition: all 0.25s;
 }
-.servicios .box5:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-}
-.servicios .box5 img {
+.servicios1 .box4 img {
   display: flex;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 10px;
 }
-.servicios .box5 p {
-  padding: 0.1rem;
-  font-size: 16px;
-  font-weight: 300;
-}
-.servicios .box5 h3 {
-  font-weight: 600;
-}
-.servicios .box5 a {
-  font-weight: 500;
-  text-decoration: none;
-  color: white;
-}
-
-.box5 {
-  background-color: rgb(238, 38, 119);
-  padding: 0%;
+.servicios1 .servicionombre {
   font-family: "Arvo", serif;
-  font-size: 30px;
+  font-size: 2rem;
   color: rgb(238, 38, 119);
   font-style: none;
   text-align: center;
   font-weight: bold;
   font-style: none;
+}
+.servicios1 .descripcionservicio {
+  font-family: "Arvo", serif;
+  font-size: 1rem;
+  color: black;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+.servicios1 .listado {
+  display: flex;
+  justify-content: center;
+}
+.servicios1 .accordion-body {
+  font-family: "Arvo", serif;
+  font-size: 1rem;
+  color: black;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+.servicios1 .botonwd {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.servicios2 {
+  padding: 0;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.servicios2 .box5 {
+  background-color: rgb(0, 206, 203);
   display: flex;
   width: 100%;
   max-width: 100%;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  display: flex;
+  width: 350px;
+  height: 600px;
+  border-radius: 16px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+.servicios2 .box5 img {
+  display: flex;
+  width: 250px;
+  height: 550px;
+  border-radius: 10px;
+}
+.servicios2 .servicionombre {
+  font-family: "Arvo", serif;
+  font-size: 2rem;
+  color: rgb(238, 38, 119);
   font-style: none;
   text-align: center;
   font-weight: bold;
   font-style: none;
+}
+.servicios2 .descripcionservicio {
+  font-family: "Arvo", serif;
+  font-size: 1rem;
+  color: black;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+.servicios2 .listado {
+  display: flex;
+  justify-content: center;
+}
+
+.botonpago {
+  font-family: "Arvo", serif;
+  font-size: 3rem;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.servicios2 {
+  padding: 0;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.servicios2 .box5 {
+  background-color: rgb(0, 206, 203);
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 350px;
+  height: 600px;
+  border-radius: 16px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+.servicios2 .box5 img {
+  display: flex;
+  width: 250px;
+  height: 550px;
+  border-radius: 10px;
+}
+.servicios2 .servicionombre {
+  font-family: "Arvo", serif;
+  font-size: 2rem;
+  color: rgb(238, 38, 119);
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+.servicios2 .descripcionservicio {
+  font-family: "Arvo", serif;
+  font-size: 1rem;
+  color: black;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+.servicios2 .listado {
+  display: flex;
+  justify-content: center;
+}
+
+.botonpago {
+  font-family: "Arvo", serif;
+  font-size: 3rem;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.servicios2 {
+  padding: 0;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.servicios2 .box5 {
+  background-color: rgb(0, 206, 203);
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 350px;
+  height: 600px;
+  border-radius: 16px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+.servicios2 .box5 img {
+  display: flex;
+  width: 250px;
+  height: 550px;
+  border-radius: 10px;
+}
+.servicios2 .servicionombre {
+  font-family: "Arvo", serif;
+  font-size: 2rem;
+  color: rgb(238, 38, 119);
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+.servicios2 .descripcionservicio {
+  font-family: "Arvo", serif;
+  font-size: 1rem;
+  color: black;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+.servicios2 .listado {
+  display: flex;
+  justify-content: center;
+}
+
+.botonpago {
+  font-family: "Arvo", serif;
+  font-size: 3rem;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.servicios2 {
+  padding: 0;
+  font-family: "Arvo", serif;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.servicios2 .box5 {
+  background-color: rgb(0, 206, 203);
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 350px;
+  height: 600px;
+  border-radius: 16px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+.servicios2 .box5 img {
+  display: flex;
+  width: 250px;
+  height: 550px;
+  border-radius: 10px;
+}
+.servicios2 .servicionombre {
+  font-family: "Arvo", serif;
+  font-size: 2rem;
+  color: rgb(238, 38, 119);
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+.servicios2 .descripcionservicio {
+  font-family: "Arvo", serif;
+  font-size: 1rem;
+  color: black;
+  font-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: none;
+}
+.servicios2 .listado {
+  display: flex;
+  justify-content: center;
+}
+
+.botonpago {
+  font-family: "Arvo", serif;
+  font-size: 3rem;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
 }
 
 .swiper {
@@ -1515,15 +1745,6 @@ h3.contacto {
   color: rgb(238, 38, 119);
 }
 
-body {
-  background-image: url(../imagenes/fondobequicm.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  justify-content: center;
-  height: 100vh;
-}
-
 .inicio {
   background-color: rgb(238, 38, 119);
   border-radius: 16px;
@@ -1568,150 +1789,6 @@ body {
   display: flex;
   grid-area: foto;
   padding: 0.5rem;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-
-.trabajaconmigoinicio {
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: 0.5fr;
-  grid-template-rows: 1fr 0.5fr;
-  grid-template-areas: "textocm1" "textocm2";
-  color: rgb(238, 38, 119);
-  text-decoration: none;
-  font-family: "Arvo", serif;
-  font-weight: normal;
-  font-style: none;
-  text-align: center;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-.trabajaconmigoinicio .trabajaconmigo {
-  display: flex;
-  grid-area: textocm1;
-  font-size: 70px;
-  color: rgb(238, 38, 119);
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin: 20px auto;
-  width: 1200px;
-  height: 150px;
-  background: white;
-  border-radius: 25px;
-  font-family: "Arvo", serif;
-  font-weight: lighter;
-  letter-spacing: 2px;
-  transition: 1s box-shadow;
-}
-.trabajaconmigoinicio .trabajaconmigo:hover {
-  box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
-}
-.trabajaconmigoinicio .trabajaconmigo:hover::before, .trabajaconmigoinicio .trabajaconmigo:hover::after {
-  display: block;
-  content: "";
-  position: absolute;
-  width: 1200px;
-  height: 150px;
-  background: #FDA8CF;
-  border-radius: 25px;
-  z-index: -1;
-  animation: 1s clockwise infinite;
-}
-.trabajaconmigoinicio .trabajaconmigo:hover:after {
-  background: #F3CE5E;
-  animation: 2s counterclockwise infinite;
-}
-@keyframes clockwise {
-  0% {
-    top: -5px;
-    left: 0;
-  }
-  12% {
-    top: -2px;
-    left: 2px;
-  }
-  25% {
-    top: 0;
-    left: 5px;
-  }
-  37% {
-    top: 2px;
-    left: 2px;
-  }
-  50% {
-    top: 5px;
-    left: 0;
-  }
-  62% {
-    top: 2px;
-    left: -2px;
-  }
-  75% {
-    top: 0;
-    left: -5px;
-  }
-  87% {
-    top: -2px;
-    left: -2px;
-  }
-  100% {
-    top: -5px;
-    left: 0;
-  }
-}
-@keyframes counterclockwise {
-  0% {
-    top: -5px;
-    right: 0;
-  }
-  12% {
-    top: -2px;
-    right: 2px;
-  }
-  25% {
-    top: 0;
-    right: 5px;
-  }
-  37% {
-    top: 2px;
-    right: 2px;
-  }
-  50% {
-    top: 5px;
-    right: 0;
-  }
-  62% {
-    top: 2px;
-    right: -2px;
-  }
-  75% {
-    top: 0;
-    right: -5px;
-  }
-  87% {
-    top: -2px;
-    right: -2px;
-  }
-  100% {
-    top: -5px;
-    right: 0;
-  }
-}
-.trabajaconmigoinicio .trabajaconmigo a {
-  color: rgb(238, 38, 119);
-  text-decoration: none;
-}
-.trabajaconmigoinicio .trabajaconmigosub {
-  display: flex;
-  grid-area: textocm2;
-  font-size: 20px;
-  text-align: center;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -1977,7 +2054,7 @@ body {
   grid-area: redeswebsicon;
   margin: 0;
   padding: 0;
-  background: white;
+  background: none;
   justify-content: center;
 }
 .redeswebsicon ul {
@@ -1999,7 +2076,7 @@ body {
   height: 60px;
   text-align: center;
   line-height: 63px;
-  background: white;
+  background: none;
   border-radius: 50%;
   font-size: 30px;
   color: rgb(238, 38, 119);
@@ -2013,7 +2090,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: rgb(255, 210, 63);
+  background: none;
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
