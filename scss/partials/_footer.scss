@@ -83,7 +83,7 @@ div.whatsappicon {
           width: 100%;
           height: 100%;
           border-radius: 50%;
-          background:none;
+          background: none;
           transition: .5s;
           transform: scale(.9);
           z-index: -1;
@@ -91,13 +91,13 @@ div.whatsappicon {
 
         &:hover::before {
           transform: scale(1.1);
-          box-shadow: 0 0 15px  $coloramarillo;
+          box-shadow: 0 0 15px $coloramarillo;
         }
 
         &:hover {
-          color:  $coloramarillo;
-          box-shadow: 0 0 5px  $coloramarillo;
-          text-shadow: 0 0 5px  $coloramarillo;
+          color: $coloramarillo;
+          box-shadow: 0 0 5px $coloramarillo;
+          text-shadow: 0 0 5px $coloramarillo;
         }
       }
     }
@@ -115,4 +115,167 @@ p.CopyRigth {
   font-style: oblique;
   text-align: center;
   color: black;
+}
+
+@media (max-width: 1024px) {
+  .piepagina {
+    width: 900px;
+  }
+  .logoinferior {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+  }
+  .redeswebsicon ul {
+    width: 900px;
+justify-content: center;
+align-items: center;
+  }
+  .CopyRigth {
+    width: 900px;
+    }
+}
+
+@media (max-width: 900px) {
+  .piepagina {
+    width: 800px;
+  }
+  .logoinferior {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+  }
+  .redeswebsicon ul {
+    width: 800px;
+justify-content: center;
+align-items: center;
+  }
+  .CopyRigth {
+    width: 800px;
+    }
+}
+
+
+@media (max-width: 815px) {
+  .piepagina {
+    width: 700px;
+  }
+  .logoinferior {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+  }
+  .redeswebsicon ul {
+    width: 700px;
+justify-content: center;
+align-items: center;
+  }
+  .CopyRigth {
+    width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+  .piepagina {
+    width: 600px;
+  }
+  .logoinferior {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+  }
+  .redeswebsicon ul {
+    width: 600px;
+justify-content: center;
+align-items: center;
+  }
+  .CopyRigth {
+    width: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+  .piepagina {
+    width: 500px;
+  }
+  .logoinferior {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+  }
+  .redeswebsicon ul {
+    width: 500px;
+justify-content: center;
+align-items: center;
+  }
+  .CopyRigth {
+    width: 500px;
+    }
+}
+
+
+
+@media (max-width: 513px) {
+
+  .piepagina {
+    width: 400px;
+  }
+  .logoinferior {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+  }
+  .redeswebsicon ul {
+    width: 400px;
+justify-content: center;
+align-items: center;
+  }
+  .CopyRigth {
+    width: 400px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+  .piepagina {
+    width: 400px;
+  }
+  .logoinferior {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+  }
+  .redeswebsicon ul {
+    width: 400px;
+justify-content: center;
+align-items: center;
+  }
+  .CopyRigth {
+    width: 400px;
+    }
+}
+
+@media (max-width: 320px) {
+
+  .piepagina {
+    width: 300px;
+  }
+  .logoinferior {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 30%;
+      height: auto;
+    }
+  }
+  .redeswebsicon ul {
+    width: 300px;
+justify-content: center;
+align-items: center;
+  }
+  .CopyRigth {
+    width: 300px;
+    }
 }

@@ -95,7 +95,7 @@
     justify-content: center;
     column-gap: 1rem;
     row-gap: 0.1rem;
-  
+
   }
 
   ul {
@@ -108,44 +108,103 @@
       margin-top: 10px;
       display: flex;
       display: list-item;
-      
-  }  }  }
+
+    }
+  }
+}
 
 
 
 
-  .project .imagen {
+.project .imagen {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  img {
     display: flex;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+
+
+.projects-list .project2 {
+  @extend .project;
+  background-color: $colorturquesa;
+}
+
+@media (max-width: 1024px) {
+
+  .portfolio {
+    margin-left: 60px;
+    width: 900px;
     justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s;
-
-    img {
-      display: flex;
-      height: 100px;
-      width: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
+    display: flex;
+    flex-wrap: wrap;
   }
+}
+@media (max-width: 900px) {
 
-
-
-
-
-
-
-
-  .projects-list .project2 {
-    @extend .project;
-    background-color: $colorturquesa;
+  .portfolio {
+    margin-left: 05px;
+    width: 900px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
   }
+}
 
 
-  @media (min-width: 01px) and (max-width: 803px) {
-    .projects-list {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
+@media (max-width: 815px) {
+
+  .portfolio {
+    margin-left: 05px;
+    width: 800px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
   }
+}
+
+
+@media (max-width: 768px) {
+
+  .portfolio {
+    margin-left: 05px;
+    width: 700px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .portfolio {
+    margin-left: 05px;
+    width: 500px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+@media (max-width: 513px) {
+
+  .portfolio {
+    margin-left: 05px;
+    width: 400px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+

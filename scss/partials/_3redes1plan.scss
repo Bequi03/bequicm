@@ -1,8 +1,8 @@
-
 .delegaredes {
-  @extend  %delegaredes
+  @extend %delegaredes
 }
-.servicios2 {
+
+.servicios3 {
   padding: 0;
   font-family: 'Arvo', serif;
   letter-spacing: 0.03em;
@@ -12,6 +12,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
+
   .box5 {
     background-color: $colorturquesa;
     display: flex;
@@ -29,16 +30,17 @@
     margin: 20px;
     text-align: center;
     transition: all 0.25s;
-    
+
     img {
       display: flex;
       width: 250px;
       height: 550px;
       border-radius: 10px;
     }
-     
+
   }
-  .servicionombre {
+
+  .servicionombre1 {
     font-family: 'Arvo', serif;
     font-size: 2rem;
     color: $colorrosa;
@@ -47,22 +49,23 @@
     font-weight: bold;
     font-style: none;
   }
-.descripcionservicio {
-  font-family: 'Arvo', serif;
-  font-size: 1rem;
-  color: black;
-  font-style: none;
-  text-align: center;
-  font-weight: bold;
-  font-style: none;
+
+  .descripcionservicio {
+    font-family: 'Arvo', serif;
+    font-size: 1rem;
+    color: black;
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
+  }
+
+  .listado {
+    display: flex;
+    justify-content: center;
+  }
 }
 
-.listado {
-  display: flex;
-  justify-content: center;
-}
-}
-  
 .botonpago {
   font-family: 'Arvo', serif;
   font-size: 3rem;
@@ -72,4 +75,48 @@
 
 }
 
+@media (max-width: 522px) {
+  .servicios3 .listado {
+    width: auto;
+  }
 
+  .listado {
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+  }
+
+  .servicionombre1 {
+    font-family: 'Arvo', serif;
+    font-size: 1rem;
+
+  }
+
+  .descripcionservicio1 {
+    font-family: 'Arvo', serif;
+    font-size: 0.5rem;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .servicios2 .listado {
+    width: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .servicios3 .listado {
+    width: 300px;
+
+  }
+
+  .servicios3 {
+    padding: 0;
+    line-height: 1.6;
+    margin: 0 auto;
+    display: block;
+    
+  }
+
+}

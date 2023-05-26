@@ -80,3 +80,18 @@
 .trabajaconmigo {
   @extend %delegaredes
 }
+p {
+  text-align: center;
+
+}
+
+@media (max-width: 1024px) {
+
+  .trabajaconmigoinicio{
+    width: 900px;
+    display: flex;
+    z-index: 1;
+  }
+}
+
+

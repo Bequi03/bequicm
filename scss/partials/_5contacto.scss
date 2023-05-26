@@ -5,39 +5,39 @@
   gap: 1rem;
   padding: 1rem;
 
-  .texto
-{display: flex;
-  justify-content: center;
-  flex-direction: column;
-
-
-  h1.principal1 {
-    font-family: 'Arvo', serif;
-    font-size: 20px;
-    font-weight: normal;
-    font-style: none;
-    text-align: center;
-    color: rgb(238 38 119);
-    justify-content: center;
-    
-  }
-
-  h1.principal1 {
+  .texto {
     display: flex;
     justify-content: center;
-  }
+    flex-direction: column;
 
-  h3.subprincipal1 {
-    display: flex;
-    font-family: 'Arvo', serif;
-    font-size: 10px;
-    font-weight: normal;
-    font-style: none;
-    text-align: center;
-    color: rgb(238 38 119);
-    justify-content: center;
+
+    h1.principal1 {
+      font-family: 'Arvo', serif;
+      font-size: 20px;
+      font-weight: normal;
+      font-style: none;
+      text-align: center;
+      color: rgb(238 38 119);
+      justify-content: center;
+
+    }
+
+    h1.principal1 {
+      display: flex;
+      justify-content: center;
+    }
+
+    h3.subprincipal1 {
+      display: flex;
+      font-family: 'Arvo', serif;
+      font-size: 10px;
+      font-weight: normal;
+      font-style: none;
+      text-align: center;
+      color: rgb(238 38 119);
+      justify-content: center;
+    }
   }
-}
 
   .redessociales {
     background-color: rgb(255 210 63);
@@ -68,36 +68,94 @@
     "emailcontacto  ";
   justify-items: stretch;
   align-items: stretch;
-  background-color: rgb(238 38 119);
+  background-color: $colorrosa;
+  font-size: 30px;
 }
 
 
 .emailcontacto {
-  background-color: rgb(238 38 119);
+  background-color: $colorrosa;
   grid-area: emailcontacto;
   display: grid;
   justify-items: center;
   align-items: center;
   align-content: center;
   gap: 3rem;
-
-}
-
-.emailcontacto {
+  font-size: 30px;
   color: white;
   font-family: 'Arvo', serif;
-  font-size: 30px;
   font-weight: normal;
   font-style: none;
   text-align: center;
-
 }
 
 
-.form {
+.form1 {
   display: grid;
   justify-content: center;
   align-items: center;
   font-family: 'Arvo', serif;
-  font-size: 18px;
+  font-size: 30px;
+}
+
+
+@media (max-width: 900px) {
+  .bequicm {
+    font-size: 8px;
+
+    .whatsymailt {
+
+      justify-content: center;
+      align-items: stretch;
+      font-size: 15px;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .bequicm {
+    font-size: 8px;
+    padding: 15px;
+
+    .whatsymailt {
+      font-size: 25px;
+    }
+    .form1 {
+      font-size: 6px;
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .bequicm {
+    width: 580px;
+    padding: 15px;
+  }
+
+  .form1 {
+    font-size: 12px;
+  }
+  .whatsymailt {
+    font-size: 25px;
+  }
+}
+
+
+
+@media (max-width: 513px) {
+  .bequicm {
+
+      padding: 10px;
+  }
+
+  .form1 {
+    font-size: 12px;
+  }
+  .whatsymailt {
+    font-size: 20px;
+  }
 }

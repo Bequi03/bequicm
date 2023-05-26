@@ -3,58 +3,58 @@
  }
 
  .inicio {
-  background-color: rgb(238 38 119);
-  border-radius: 16px;
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  padding: 1rem;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 3fr;
-  grid-template-areas:
-    "texto1 foto"
-    "texto2 foto";
+   background-color: rgb(238 38 119);
+   border-radius: 16px;
+   width: 1200px;
+   margin-left: auto;
+   margin-right: auto;
+   display: grid;
+   padding: 1rem;
+   grid-template-columns: 3fr 1fr;
+   grid-template-rows: 1fr 3fr;
+   grid-template-areas:
+     "texto1 foto"
+     "texto2 foto";
 
-  .textoinicio1 {
-    padding: 1rem;
-    font-family: 'Arvo', serif;
-    font-size: 20px;
-    font-weight: normal;
-    font-style: none;
-    text-align: center;
-    color: $coloramarillo;
-    display: flex;
-    grid-area: texto1;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  }
+   .textoinicio1 {
+     padding: 1rem;
+     font-family: 'Arvo', serif;
+     font-size: 20px;
+     font-weight: normal;
+     font-style: none;
+     text-align: center;
+     color: $coloramarillo;
+     display: flex;
+     grid-area: texto1;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
 
-  .textoinicio2 {
-    padding: 1rem;
-    font-family: 'Arvo', serif;
-    font-size: 20px;
-    font-weight: normal;
-    font-style: none;
-    text-align: center;
-    color: $coloramarillo;
-    display: flex;
-    grid-area: texto2;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  }
+   .textoinicio2 {
+     padding: 1rem;
+     font-family: 'Arvo', serif;
+     font-size: 20px;
+     font-weight: normal;
+     font-style: none;
+     text-align: center;
+     color: $coloramarillo;
+     display: flex;
+     grid-area: texto2;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
 
-  .fotobequi {
-    display: flex;
-    grid-area: foto;
-    padding: 0.5rem;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  }
-}
+   .fotobequi {
+     display: flex;
+     grid-area: foto;
+     padding: 0.5rem;
+     justify-content: center;
+     text-align: center;
+     align-items: center;
+   }
+ }
 
 
 
@@ -69,12 +69,12 @@
  }
 
  .encabezadoport {
-  width: 1200px;
+   width: 1200px;
    margin-left: auto;
    margin-right: auto;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-   grid-template-rows: 1fr  120px 110px;
+   grid-template-rows: 1fr 120px 110px;
    grid-template-areas:
      "dedondefoto dedondequeestfoto dedondecmfoto dedondewdfoto hobbiesfoto"
      "dedondetexto dedondequeesttex dedondecmtexto dedondewdtexto hobbiestexto"
@@ -89,12 +89,13 @@
    justify-content: center;
    text-align: center;
    align-items: center;
+   font-size: 20px;
+   padding: 1rem;
 
    .dedondefoto {
      display: flex;
      grid-area: dedondefoto;
-     padding: 0.5rem;
-     justify-content: center;
+      justify-content: center;
      text-align: center;
      align-items: center;
    }
@@ -102,9 +103,7 @@
    .dedondetexto {
      display: flex;
      grid-area: dedondetexto;
-     padding: 1rem;
      font-family: 'Arvo', serif;
-     font-size: 20px;
      font-weight: normal;
      font-style: none;
      text-align: center;
@@ -117,9 +116,7 @@
    .dedondedesc {
      display: flex;
      grid-area: dedondedesc;
-     padding: 1rem;
      font-family: 'Arvo', serif;
-     font-size: 20px;
      font-weight: normal;
      font-style: none;
      text-align: center;
@@ -133,7 +130,6 @@
    .dedondequeestfoto {
      display: flex;
      grid-area: dedondequeestfoto;
-     padding: 0.5rem;
      justify-content: center;
      text-align: center;
      align-items: center;
@@ -142,9 +138,7 @@
    .dedondequeesttex {
      display: flex;
      grid-area: dedondequeesttex;
-     padding: 1rem;
      font-family: 'Arvo', serif;
-     font-size: 20px;
      font-weight: normal;
      font-style: none;
      text-align: center;
@@ -157,9 +151,7 @@
    .dedondequeestdesc {
      display: flex;
      grid-area: dedondequeestdesc;
-     padding: 1rem;
      font-family: 'Arvo', serif;
-     font-size: 20px;
      font-weight: normal;
      font-style: none;
      text-align: center;
@@ -173,7 +165,6 @@
    .dedondecmfoto {
      display: flex;
      grid-area: dedondecmfoto;
-     padding: 0.5rem;
      justify-content: center;
      text-align: center;
      align-items: center;
@@ -182,9 +173,8 @@
    .dedondecmtexto {
      display: flex;
      grid-area: dedondecmtexto;
-     padding: 1rem;
      font-family: 'Arvo', serif;
-     font-size: 20px;
+
      font-weight: normal;
      font-style: none;
      text-align: center;
@@ -197,9 +187,8 @@
    .dedondecmtexto2 {
      display: flex;
      grid-area: dedondecmtexto2;
-     padding: 1rem;
      font-family: 'Arvo', serif;
-     font-size: 20px;
+
      font-weight: normal;
      font-style: none;
      text-align: center;
@@ -213,7 +202,6 @@
    .dedondewdfoto {
      display: flex;
      grid-area: dedondewdfoto;
-     padding: 0.5rem;
      justify-content: center;
      text-align: center;
      align-items: center;
@@ -222,9 +210,8 @@
    .dedondewdtexto {
      display: flex;
      grid-area: dedondewdtexto;
-     padding: 1rem;
      font-family: 'Arvo', serif;
-     font-size: 20px;
+
      font-weight: normal;
      font-style: none;
      text-align: center;
@@ -237,10 +224,8 @@
    .dedondewdtexto2 {
      display: flex;
      grid-area: dedondewdtexto2;
-     padding: 1rem;
      font-family: 'Arvo', serif;
-     font-size: 20px;
-     font-weight: normal;
+       font-weight: normal;
      font-style: none;
      text-align: center;
      color: $colorrosa;
@@ -252,7 +237,6 @@
    .hobbiesfoto {
      display: flex;
      grid-area: hobbiesfoto;
-     padding: 0.5rem;
      justify-content: center;
      text-align: center;
      align-items: center;
@@ -261,10 +245,8 @@
    .hobbiestexto {
      display: flex;
      grid-area: hobbiestexto;
-     padding: 1rem;
      font-family: 'Arvo', serif;
-     font-size: 20px;
-     font-weight: normal;
+      font-weight: normal;
      font-style: none;
      text-align: center;
      color: $colorrosa;
@@ -276,10 +258,8 @@
    .hobbiestexto2 {
      display: flex;
      grid-area: hobbiestexto2;
-     padding: 1rem;
      font-family: 'Arvo', serif;
-     font-size: 20px;
-     font-weight: normal;
+       font-weight: normal;
      font-style: none;
      text-align: center;
      color: $colorrosa;
@@ -290,3 +270,180 @@
 
 
  }
+
+
+ @media (max-width: 1024px) {
+
+   .inicio {
+     width: 900px;
+   }
+
+   .encabezadoport {
+     width: 900px;
+     margin-left: auto;
+     margin-right: auto;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+     grid-template-rows: 1fr 180px 180px;
+   }
+ }
+
+ 
+ @media (max-width: 900px) {
+
+  .inicio {
+    width: 800px;
+  }
+
+  .encabezadoport {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 20px 60px;
+    font-size: 10px;
+    padding: 0.2rem;
+ gap: 0.2rem;
+  }
+}
+
+@media (max-width: 815px) {
+
+  .inicio {
+    width: 700px;
+  }
+  .encabezadoport {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 20px 60px;
+    font-size: 10px;
+    padding: 0.2rem;
+ gap: 0.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .inicio {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+  .encabezadoport {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    .dedondetexto{ 
+      font-size: 18px;
+    } .dedondequeesttex{ 
+      font-size: 18px;
+    } .dedondecmtexto{ 
+      font-size: 18px;
+    } .dedondewdtexto{ 
+      font-size: 18px;
+    } .hobbiestexto { 
+      font-size: 18px;
+    }
+  .dedondedesc{ 
+    font-size: 18px;
+  } .dedondequeestdesc{ 
+    font-size: 18px;
+  } .dedondecmtexto2{ 
+    font-size: 18px;
+  } .dedondewdtexto2{ 
+    font-size: 18px;
+  } .hobbiestexto2 { 
+    font-size: 18px;
+  }
+  }
+}
+
+@media (max-width: 600px) {
+
+  .inicio {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+  .encabezadoport {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    .dedondetexto{ 
+      font-size: 18px;
+    } .dedondequeesttex{ 
+      font-size: 18px;
+    } .dedondecmtexto{ 
+      font-size: 18px;
+    } .dedondewdtexto{ 
+      font-size: 18px;
+    } .hobbiestexto { 
+      font-size: 18px;
+    }
+  .dedondedesc{ 
+    font-size: 18px;
+  } .dedondequeestdesc{ 
+    font-size: 18px;
+  } .dedondecmtexto2{ 
+    font-size: 18px;
+  } .dedondewdtexto2{ 
+    font-size: 18px;
+  } .hobbiestexto2 { 
+    font-size: 18px;
+  }
+  img {
+    width: 50%;
+    height: 50%;
+  }
+  }
+}
+
+@media (max-width: 513px) {
+
+  .inicio {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  .encabezadoport {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    .dedondetexto{ 
+      font-size: 18px;
+    } .dedondequeesttex{ 
+      font-size: 18px;
+    } .dedondecmtexto{ 
+      font-size: 18px;
+    } .dedondewdtexto{ 
+      font-size: 18px;
+    } .hobbiestexto { 
+      font-size: 18px;
+    }
+  .dedondedesc{ 
+    font-size: 18px;
+  } .dedondequeestdesc{ 
+    font-size: 18px;
+  } .dedondecmtexto2{ 
+    font-size: 18px;
+  } .dedondewdtexto2{ 
+    font-size: 18px;
+  } .hobbiestexto2 { 
+    font-size: 18px;
+  }
+  img {
+    width: 50%;
+    height: 50%;
+  }
+  }
+}
