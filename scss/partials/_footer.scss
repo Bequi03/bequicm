@@ -1,9 +1,3 @@
-/*LOGOWATS*/
-div.whatsappicon {
-  @extend %whatsappicon
-}
-
-
 .piepagina {
   width: 1200px;
   margin-left: auto;
@@ -31,7 +25,6 @@ div.whatsappicon {
   img {
     height: 100px;
     width: auto;
-    margin-top: 50px;
 
     &:hover {
       transform: scale(1.2);
@@ -121,38 +114,44 @@ p.CopyRigth {
   .piepagina {
     width: 900px;
   }
+
   .logoinferior {
     width: 900px;
     display: flex;
     justify-content: center;
   }
+
   .redeswebsicon ul {
     width: 900px;
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
   }
+
   .CopyRigth {
     width: 900px;
-    }
+  }
 }
 
 @media (max-width: 900px) {
   .piepagina {
     width: 800px;
   }
+
   .logoinferior {
     width: 800px;
     display: flex;
     justify-content: center;
   }
+
   .redeswebsicon ul {
     width: 800px;
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
   }
+
   .CopyRigth {
     width: 800px;
-    }
+  }
 }
 
 
@@ -160,122 +159,223 @@ align-items: center;
   .piepagina {
     width: 700px;
   }
+
   .logoinferior {
     width: 700px;
     display: flex;
     justify-content: center;
   }
+
   .redeswebsicon ul {
     width: 700px;
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
   }
+
   .CopyRigth {
     width: 700px;
-    }
+  }
 }
 
 @media (max-width: 768px) {
   .piepagina {
     width: 600px;
   }
+
   .logoinferior {
     width: 600px;
     display: flex;
     justify-content: center;
   }
+
   .redeswebsicon ul {
     width: 600px;
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
   }
+
   .CopyRigth {
     width: 600px;
-    }
+  }
 }
 
 @media (max-width: 600px) {
+ 
   .piepagina {
-    width: 500px;
+    width: 300px;
   }
+
   .logoinferior {
-    width: 500px;
+    width: 300px;
     display: flex;
     justify-content: center;
-  }
-  .redeswebsicon ul {
-    width: 500px;
-justify-content: center;
-align-items: center;
-  }
-  .CopyRigth {
-    width: 500px;
+    align-items: center;
+
+    img {
+      width: 50%;
+      height: auto;
     }
-}
-
-
-
-@media (max-width: 513px) {
-
-  .piepagina {
-    width: 400px;
   }
+
+  .redeswebsicon ul {
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      width: 300px;
+
+      a {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 53px;
+        border-radius: 50%;
+        font-size: 30px;
+
+      }}}
+      p.CopyRigth {
+        width: 300px;
+               font-size: 10px;
+
+      }
+    }
+
+
+
+@media (max-width: 520px) {
+
+  
+  .piepagina {
+    width: 300px;
+  }
+
   .logoinferior {
-    width: 400px;
+    width: 300px;
     display: flex;
     justify-content: center;
-  }
-  .redeswebsicon ul {
-    width: 400px;
-justify-content: center;
-align-items: center;
-  }
-  .CopyRigth {
-    width: 400px;
+    align-items: center;
+
+    img {
+      width: 40%;
+      height: auto;
     }
-}
+  }
+
+  .redeswebsicon ul {
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      width: 300px;
+
+      a {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 53px;
+        border-radius: 50%;
+        font-size: 20px;
+
+      }}}
+      p.CopyRigth {
+        width: 300px;
+               font-size: 10px;
+      }
+    }
+
 
 
 @media (max-width: 480px) {
 
   .piepagina {
-    width: 400px;
+    width: 300px;
   }
+
   .logoinferior {
-    width: 400px;
+    width: 300px;
     display: flex;
     justify-content: center;
-  }
-  .redeswebsicon ul {
-    width: 400px;
-justify-content: center;
-align-items: center;
-  }
-  .CopyRigth {
-    width: 400px;
+    align-items: center;
+
+    img {
+      width: 40%;
+      height: auto;
     }
-}
+  }
+
+  .redeswebsicon ul {
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      width: 300px;
+
+      a {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 53px;
+        border-radius: 50%;
+        font-size: 20px;
+
+      }}}
+      p.CopyRigth {
+        width: 300px;
+               font-size: 10px;
+
+      }
+    }
+
 
 @media (max-width: 320px) {
 
   .piepagina {
     width: 300px;
   }
+
   .logoinferior {
     width: 300px;
     display: flex;
     justify-content: center;
+    align-items: center;
+
     img {
-      width: 30%;
+      width: 40%;
       height: auto;
     }
   }
+
   .redeswebsicon ul {
     width: 300px;
-justify-content: center;
-align-items: center;
-  }
-  .CopyRigth {
-    width: 300px;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      width: 300px;
+
+      a {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 53px;
+        border-radius: 50%;
+        font-size: 20px;
+
+      }}}
+      p.CopyRigth {
+        width: 300px;
+               font-size: 10px;
+
+      }
     }
-}

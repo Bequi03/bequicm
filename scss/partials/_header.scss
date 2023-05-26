@@ -104,7 +104,7 @@
 }
 
 @media (max-width: 1024px) {
-    .navbar {
+  .navbar {
     font-size: 0.9rem;
   }
 }
@@ -140,6 +140,7 @@
     font-size: 1rem;
   }
 }
+
 @media (max-width: 480px) {
   .navbar {
     font-size: 1rem;
@@ -151,8 +152,24 @@
     font-size: 1rem;
   }
 }
+
 @media (max-width: 320px) {
+  .tituloInicio {
+    font-size: 10px;
+  }
+
+  .bequicmwd {
+
+    h1.principal {
+      font-size: 20px;
+    }
+
+    h3.subprincipal {
+      font-size: 8px;
+    }
+  }
+
   .navbar {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }

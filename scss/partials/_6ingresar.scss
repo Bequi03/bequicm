@@ -1,37 +1,36 @@
-  
-  .form {
-    display: grid;
+  .ingresar {
+    display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Arvo', serif;
     font-size: 18px;
   }
 
-    
+
 
   @media (max-width: 900px) {
-    .form  {
-       font-size: 10px;
-      }
+    .form {
+      font-size: 10px;
+    }
   }
-  
-  
+
+
   @media (max-width: 768px) {
-    .form  {
+    .ingresar {
       font-size: 10px;
-      }
+    }
   }
-  
+
   @media (max-width: 600px) {
-  
-    .form  {
+
+    .ingresar {
       font-size: 10px;
-      }
+    }
   }
-  
-  
+
+
   @media (max-width: 513px) {
-    .form  {
+    .ingresar {
       font-size: 10px;
-      }
+    }
   }

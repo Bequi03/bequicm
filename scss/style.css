@@ -4,7 +4,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  justify-content: center;
+  background-attachment: fixed;
+  background-position: center;
   height: 100vh;
 }
 
@@ -32,17 +33,18 @@ body {
   justify-content: center;
 }
 
-div.whatsappicon {
+.whatsappicon {
   position: fixed;
   bottom: 200px;
   right: 0;
   z-index: 2;
+  margin-right: 1rem;
 }
-div.whatsappicon img {
+.whatsappicon img {
   height: 12rem;
   width: auto;
 }
-div.whatsappicon img:hover {
+.whatsappicon img:hover {
   transform: scale(1.2);
 }
 
@@ -236,7 +238,11 @@ div.whatsappicon img:hover {
 }
 @media (max-width: 768px) {
   .whatsappicon {
-    margin-right: 4px;
+    margin-right: 2px;
+  }
+  .whatsappicon img {
+    height: 12rem;
+    width: auto;
   }
   .delegaredes {
     width: 600px;
@@ -254,77 +260,297 @@ div.whatsappicon img:hover {
     margin-right: 4px;
   }
   .delegaredes {
-    width: 500px;
+    margin-left: auto;
+    justify-content: center;
     display: flex;
-    z-index: 1;
-    font-size: 8px;
-    padding: 10px;
+    flex-direction: column;
   }
-  .delegaredes .delegaredessub {
-    font-size: 10px;
+  .delegaredes .delegaredes {
+    font-size: 20px;
+    width: 500px;
+    height: 80px;
+    border-radius: 55px;
+  }
+  .delegaredes .delegaredes:hover::before,
+  .delegaredes .delegaredes:hover::after {
+    width: 500px;
+    height: 80px;
   }
 }
-@media (max-width: 513px) {
+@media (max-width: 514px) {
   .whatsappicon {
-    margin-right: 4px;
+    position: fixed;
+    bottom: 200px;
+    right: 0;
+    z-index: 2;
+    margin-right: 0.1rem;
+  }
+  .whatsappicon img {
+    height: 8rem;
+    width: auto;
+  }
+  .whatsappicon img:hover {
+    transform: scale(1.2);
+  }
+  .trabajaconmigoinicio, .trabajaconmigo, .delegaredes {
+    font-family: "Arvo", serif;
+    font-size: 12px;
+    color: rgb(238, 38, 119);
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
   }
   .delegaredes {
-    width: 400px;
-    display: flex;
-    z-index: 1;
-    font-size: 8px;
-    padding: 10px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    padding: auto;
+    grid-template-columns: 0.5fr;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-areas: "textocm1" "textocm2";
+    color: rgb(238, 38, 119);
+    text-decoration: none;
+    font-family: "Arvo", serif;
+    font-weight: normal;
+    font-style: none;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
   .delegaredes .delegaredessub {
+    display: flex;
+    grid-area: textocm2;
     font-size: 10px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .delegaredes .delegaredes {
+    display: flex;
+    grid-area: textocm1;
+    font-size: 15px;
+    color: rgb(238, 38, 119);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    width: 300px;
+    height: 90px;
+    background: white;
+    border-radius: 10px;
+    font-family: "Arvo", serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    transition: 1s box-shadow;
+    box-sizing: border-box;
+  }
+  .delegaredes .delegaredes:hover {
+    box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
+  }
+  .delegaredes .delegaredes:hover::before, .delegaredes .delegaredes:hover::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 90px;
+    background: #FDA8CF;
+    border-radius: 10px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+  }
+  .delegaredes .delegaredes:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
   }
 }
 @media (max-width: 480px) {
   .whatsappicon {
-    margin-right: 4px;
+    position: fixed;
+    bottom: 200px;
+    right: 0;
+    z-index: 2;
+    margin-right: 0.1rem;
+  }
+  .whatsappicon img {
+    height: 8rem;
+    width: auto;
+  }
+  .whatsappicon img:hover {
+    transform: scale(1.2);
+  }
+  .trabajaconmigoinicio, .trabajaconmigo, .delegaredes {
+    font-family: "Arvo", serif;
+    font-size: 12px;
+    color: rgb(238, 38, 119);
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
   }
   .delegaredes {
-    width: 20px;
-    height: 110px;
-    display: flex;
-    z-index: 1;
-    font-size: 8px;
-    padding: 10px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    padding: auto;
+    grid-template-columns: 0.5fr;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-areas: "textocm1" "textocm2";
+    color: rgb(238, 38, 119);
+    text-decoration: none;
+    font-family: "Arvo", serif;
+    font-weight: normal;
+    font-style: none;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
   .delegaredes .delegaredessub {
-    font-size: 10px;
-  }
-}
-@media (max-width: 402px) {
-  .whatsappicon {
-    margin-right: 4px;
-  }
-  .delegaredes {
-    width: 20px;
-    height: 110px;
     display: flex;
-    z-index: 1;
-    font-size: 8px;
-    padding: 10px;
-  }
-  .delegaredes .delegaredessub {
+    grid-area: textocm2;
     font-size: 10px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .delegaredes .delegaredes {
+    display: flex;
+    grid-area: textocm1;
+    font-size: 15px;
+    color: rgb(238, 38, 119);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    width: 300px;
+    height: 90px;
+    background: white;
+    border-radius: 10px;
+    font-family: "Arvo", serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    transition: 1s box-shadow;
+    box-sizing: border-box;
+  }
+  .delegaredes .delegaredes:hover {
+    box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
+  }
+  .delegaredes .delegaredes:hover::before, .delegaredes .delegaredes:hover::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 90px;
+    background: #FDA8CF;
+    border-radius: 10px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+  }
+  .delegaredes .delegaredes:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
   }
 }
 @media (max-width: 320px) {
   .whatsappicon {
-    margin-right: 2px;
+    position: fixed;
+    bottom: 200px;
+    right: 0;
+    z-index: 2;
+    margin-right: 0.1rem;
+  }
+  .whatsappicon img {
+    height: 6rem;
+    width: auto;
+  }
+  .whatsappicon img:hover {
+    transform: scale(1.2);
+  }
+  .trabajaconmigoinicio, .trabajaconmigo, .delegaredes {
+    font-family: "Arvo", serif;
+    font-size: 12px;
+    color: rgb(238, 38, 119);
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
   }
   .delegaredes {
-    width: 10px;
-    height: 100px;
-    display: flex;
-    z-index: 1;
-    font-size: 8px;
-    padding: 10px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    padding: auto;
+    grid-template-columns: 0.5fr;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-areas: "textocm1" "textocm2";
+    color: rgb(238, 38, 119);
+    text-decoration: none;
+    font-family: "Arvo", serif;
+    font-weight: normal;
+    font-style: none;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
   .delegaredes .delegaredessub {
+    display: flex;
+    grid-area: textocm2;
     font-size: 10px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .delegaredes .delegaredes {
+    display: flex;
+    grid-area: textocm1;
+    font-size: 15px;
+    color: rgb(238, 38, 119);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 20px auto;
+    width: 300px;
+    height: 90px;
+    background: white;
+    border-radius: 10px;
+    font-family: "Arvo", serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    transition: 1s box-shadow;
+    box-sizing: border-box;
+  }
+  .delegaredes .delegaredes:hover {
+    box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
+  }
+  .delegaredes .delegaredes:hover::before, .delegaredes .delegaredes:hover::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 90px;
+    background: #FDA8CF;
+    border-radius: 10px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+  }
+  .delegaredes .delegaredes:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
   }
 }
 .inicio {
@@ -802,8 +1028,17 @@ div.whatsappicon img:hover {
   }
 }
 @media (max-width: 320px) {
+  .tituloInicio {
+    font-size: 10px;
+  }
+  .bequicmwd h1.principal {
+    font-size: 20px;
+  }
+  .bequicmwd h3.subprincipal {
+    font-size: 8px;
+  }
   .navbar {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 .inicio {
@@ -1791,12 +2026,70 @@ p {
   }
   .servicios3 {
     padding: 0;
+    font-family: "Arvo", serif;
+    letter-spacing: 0.03em;
     line-height: 1.6;
+    align-items: center;
+    flex-wrap: wrap;
     margin: 0 auto;
-    display: block;
+    display: flex;
+    justify-content: center;
+  }
+  .servicios3 .box5 {
+    background-color: rgb(0, 206, 203);
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 250px;
+    height: 450px;
+    border-radius: 16px;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+  }
+  .servicios3 .box5 img {
+    display: flex;
+    width: 150px;
+    height: 400px;
+    border-radius: 10px;
+  }
+  .servicios3 .servicionombre1 {
+    font-family: "Arvo", serif;
+    font-size: 1rem;
+    color: rgb(238, 38, 119);
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
+  }
+  .servicios3 .descripcionservicio {
+    font-family: "Arvo", serif;
+    font-size: 0.5rem;
+    color: black;
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
+  }
+  .servicios3 .listado {
+    display: flex;
+    justify-content: center;
+  }
+  .botonpago {
+    font-family: "Arvo", serif;
+    font-size: 3rem;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
   }
 }
-.servicios2 {
+.servicios3 {
   padding: 0;
   font-family: "Arvo", serif;
   letter-spacing: 0.03em;
@@ -1807,7 +2100,7 @@ p {
   display: flex;
   justify-content: center;
 }
-.servicios2 .box5 {
+.servicios3 .box5 {
   background-color: rgb(0, 206, 203);
   display: flex;
   width: 100%;
@@ -1825,13 +2118,13 @@ p {
   text-align: center;
   transition: all 0.25s;
 }
-.servicios2 .box5 img {
+.servicios3 .box5 img {
   display: flex;
   width: 250px;
   height: 550px;
   border-radius: 10px;
 }
-.servicios2 .servicionombre {
+.servicios3 .servicionombre1 {
   font-family: "Arvo", serif;
   font-size: 2rem;
   color: rgb(238, 38, 119);
@@ -1840,7 +2133,7 @@ p {
   font-weight: bold;
   font-style: none;
 }
-.servicios2 .descripcionservicio {
+.servicios3 .descripcionservicio {
   font-family: "Arvo", serif;
   font-size: 1rem;
   color: black;
@@ -1849,7 +2142,7 @@ p {
   font-weight: bold;
   font-style: none;
 }
-.servicios2 .listado {
+.servicios3 .listado {
   display: flex;
   justify-content: center;
 }
@@ -1862,7 +2155,99 @@ p {
   justify-content: center;
 }
 
-.servicios2 {
+@media (max-width: 522px) {
+  .servicios3 .listado {
+    width: auto;
+  }
+  .listado {
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+  }
+  .servicionombre1 {
+    font-family: "Arvo", serif;
+    font-size: 1rem;
+  }
+  .descripcionservicio1 {
+    font-family: "Arvo", serif;
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .servicios2 .listado {
+    width: auto;
+  }
+}
+@media (max-width: 320px) {
+  .servicios3 .listado {
+    width: 300px;
+  }
+  .servicios3 {
+    padding: 0;
+    font-family: "Arvo", serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .servicios3 .box5 {
+    background-color: rgb(0, 206, 203);
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 250px;
+    height: 450px;
+    border-radius: 16px;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+  }
+  .servicios3 .box5 img {
+    display: flex;
+    width: 150px;
+    height: 400px;
+    border-radius: 10px;
+  }
+  .servicios3 .servicionombre1 {
+    font-family: "Arvo", serif;
+    font-size: 1rem;
+    color: rgb(238, 38, 119);
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
+  }
+  .servicios3 .descripcionservicio {
+    font-family: "Arvo", serif;
+    font-size: 0.5rem;
+    color: black;
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
+  }
+  .servicios3 .listado {
+    display: flex;
+    justify-content: center;
+  }
+  .botonpago {
+    font-family: "Arvo", serif;
+    font-size: 3rem;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+  }
+}
+.servicios3 {
   padding: 0;
   font-family: "Arvo", serif;
   letter-spacing: 0.03em;
@@ -1873,7 +2258,7 @@ p {
   display: flex;
   justify-content: center;
 }
-.servicios2 .box5 {
+.servicios3 .box5 {
   background-color: rgb(0, 206, 203);
   display: flex;
   width: 100%;
@@ -1891,13 +2276,13 @@ p {
   text-align: center;
   transition: all 0.25s;
 }
-.servicios2 .box5 img {
+.servicios3 .box5 img {
   display: flex;
   width: 250px;
   height: 550px;
   border-radius: 10px;
 }
-.servicios2 .servicionombre {
+.servicios3 .servicionombre1 {
   font-family: "Arvo", serif;
   font-size: 2rem;
   color: rgb(238, 38, 119);
@@ -1906,7 +2291,7 @@ p {
   font-weight: bold;
   font-style: none;
 }
-.servicios2 .descripcionservicio {
+.servicios3 .descripcionservicio {
   font-family: "Arvo", serif;
   font-size: 1rem;
   color: black;
@@ -1915,7 +2300,7 @@ p {
   font-weight: bold;
   font-style: none;
 }
-.servicios2 .listado {
+.servicios3 .listado {
   display: flex;
   justify-content: center;
 }
@@ -1928,7 +2313,99 @@ p {
   justify-content: center;
 }
 
-.servicios2 {
+@media (max-width: 522px) {
+  .servicios3 .listado {
+    width: auto;
+  }
+  .listado {
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+  }
+  .servicionombre1 {
+    font-family: "Arvo", serif;
+    font-size: 1rem;
+  }
+  .descripcionservicio1 {
+    font-family: "Arvo", serif;
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .servicios2 .listado {
+    width: auto;
+  }
+}
+@media (max-width: 320px) {
+  .servicios3 .listado {
+    width: 300px;
+  }
+  .servicios3 {
+    padding: 0;
+    font-family: "Arvo", serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .servicios3 .box5 {
+    background-color: rgb(0, 206, 203);
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 250px;
+    height: 450px;
+    border-radius: 16px;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+  }
+  .servicios3 .box5 img {
+    display: flex;
+    width: 150px;
+    height: 400px;
+    border-radius: 10px;
+  }
+  .servicios3 .servicionombre1 {
+    font-family: "Arvo", serif;
+    font-size: 1rem;
+    color: rgb(238, 38, 119);
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
+  }
+  .servicios3 .descripcionservicio {
+    font-family: "Arvo", serif;
+    font-size: 0.5rem;
+    color: black;
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
+  }
+  .servicios3 .listado {
+    display: flex;
+    justify-content: center;
+  }
+  .botonpago {
+    font-family: "Arvo", serif;
+    font-size: 3rem;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+  }
+}
+.servicios3 {
   padding: 0;
   font-family: "Arvo", serif;
   letter-spacing: 0.03em;
@@ -1939,7 +2416,7 @@ p {
   display: flex;
   justify-content: center;
 }
-.servicios2 .box5 {
+.servicios3 .box5 {
   background-color: rgb(0, 206, 203);
   display: flex;
   width: 100%;
@@ -1957,13 +2434,13 @@ p {
   text-align: center;
   transition: all 0.25s;
 }
-.servicios2 .box5 img {
+.servicios3 .box5 img {
   display: flex;
   width: 250px;
   height: 550px;
   border-radius: 10px;
 }
-.servicios2 .servicionombre {
+.servicios3 .servicionombre1 {
   font-family: "Arvo", serif;
   font-size: 2rem;
   color: rgb(238, 38, 119);
@@ -1972,7 +2449,7 @@ p {
   font-weight: bold;
   font-style: none;
 }
-.servicios2 .descripcionservicio {
+.servicios3 .descripcionservicio {
   font-family: "Arvo", serif;
   font-size: 1rem;
   color: black;
@@ -1981,7 +2458,7 @@ p {
   font-weight: bold;
   font-style: none;
 }
-.servicios2 .listado {
+.servicios3 .listado {
   display: flex;
   justify-content: center;
 }
@@ -1994,6 +2471,98 @@ p {
   justify-content: center;
 }
 
+@media (max-width: 522px) {
+  .servicios3 .listado {
+    width: auto;
+  }
+  .listado {
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+  }
+  .servicionombre1 {
+    font-family: "Arvo", serif;
+    font-size: 1rem;
+  }
+  .descripcionservicio1 {
+    font-family: "Arvo", serif;
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .servicios2 .listado {
+    width: auto;
+  }
+}
+@media (max-width: 320px) {
+  .servicios3 .listado {
+    width: 300px;
+  }
+  .servicios3 {
+    padding: 0;
+    font-family: "Arvo", serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .servicios3 .box5 {
+    background-color: rgb(0, 206, 203);
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 250px;
+    height: 450px;
+    border-radius: 16px;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+  }
+  .servicios3 .box5 img {
+    display: flex;
+    width: 150px;
+    height: 400px;
+    border-radius: 10px;
+  }
+  .servicios3 .servicionombre1 {
+    font-family: "Arvo", serif;
+    font-size: 1rem;
+    color: rgb(238, 38, 119);
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
+  }
+  .servicios3 .descripcionservicio {
+    font-family: "Arvo", serif;
+    font-size: 0.5rem;
+    color: black;
+    font-style: none;
+    text-align: center;
+    font-weight: bold;
+    font-style: none;
+  }
+  .servicios3 .listado {
+    display: flex;
+    justify-content: center;
+  }
+  .botonpago {
+    font-family: "Arvo", serif;
+    font-size: 3rem;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+  }
+}
 .swiper {
   width: 1000px;
 }
@@ -2015,7 +2584,7 @@ p {
 .card::before {
   content: "";
   position: absolute;
-  height: 30%;
+  height: 25%;
   width: 100%;
   background-color: rgb(238, 38, 119);
   border-radius: 20px 20px 0 0;
@@ -2050,7 +2619,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 5px;
   color: rgb(238, 38, 119);
 }
 .card .name-profession .name {
@@ -2058,7 +2627,7 @@ p {
   font: weight 600px;
 }
 .card .name-profession .profession {
-  font-size: 15px;
+  font-size: 10px;
   font: weight 500px;
 }
 .card .rating {
@@ -2128,6 +2697,316 @@ section .card .image img {
   font-size: 18px;
 }
 
+@media (max-width: 995px) {
+  .card {
+    height: 360px;
+    width: 296px;
+    margin: 20px 50px;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    height: 25%;
+    width: 100%;
+  }
+  .card .card-content {
+    padding: 30px;
+    position: relative;
+    z-index: 100;
+  }
+  .card .media-icons {
+    top: 5px;
+    right: 20px;
+  }
+  .card .media-icons i {
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .card .media-icons i:hover {
+    opacity: 1;
+  }
+  .card .name-profession {
+    margin-top: 10px;
+  }
+  .card .name-profession .name {
+    font-size: 15px;
+    font: weight 600px;
+  }
+  .card .name-profession .profession {
+    font-size: 12px;
+    font: weight 500px;
+  }
+  .card .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+  }
+  .card .rating i {
+    font-size: 18px;
+    color: rgb(238, 38, 119);
+    margin: 0 2px;
+  }
+  section .tarjetaexperiencia {
+    position: relative;
+    width: 450;
+    width: 1075px;
+  }
+  section .card .image {
+    height: 100px;
+    width: 100px;
+  }
+  section .card .image img {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .card {
+    height: 380px;
+    width: 396px;
+    margin: 20px 50px;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    height: 19%;
+    width: 100%;
+  }
+  .card .card-content {
+    padding: 30px;
+    position: relative;
+    z-index: 100;
+  }
+  .card .media-icons {
+    top: 5px;
+    right: 20px;
+  }
+  .card .media-icons i {
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .card .media-icons i:hover {
+    opacity: 1;
+  }
+  .card .name-profession {
+    margin-top: 10px;
+  }
+  .card .name-profession .name {
+    font-size: 10px;
+    font: weight 600px;
+  }
+  .card .name-profession .profession {
+    font-size: 10px;
+    font: weight 500px;
+  }
+  .card .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .card .rating i {
+    font-size: 15px;
+    color: rgb(238, 38, 119);
+    margin: 0 2px;
+  }
+  section .tarjetaexperiencia {
+    position: relative;
+    width: 550;
+    width: 1075px;
+  }
+  section .card .image {
+    height: 100px;
+    width: 100px;
+  }
+  section .card .image img {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .card {
+    height: 380px;
+    width: 396px;
+    margin: 20px 50px;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    height: 19%;
+    width: 100%;
+  }
+  .card .card-content {
+    padding: 30px;
+    position: relative;
+    z-index: 100;
+  }
+  .card .media-icons {
+    top: 5px;
+    right: 20px;
+  }
+  .card .media-icons i {
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .card .media-icons i:hover {
+    opacity: 1;
+  }
+  .card .name-profession {
+    margin-top: 10px;
+  }
+  .card .name-profession .name {
+    font-size: 10px;
+    font: weight 600px;
+  }
+  .card .name-profession .profession {
+    font-size: 10px;
+    font: weight 500px;
+  }
+  .card .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .card .rating i {
+    font-size: 15px;
+    color: rgb(238, 38, 119);
+    margin: 0 2px;
+  }
+  section .tarjetaexperiencia {
+    position: relative;
+    width: 550;
+    width: 1075px;
+  }
+  section .card .image {
+    height: 100px;
+    width: 100px;
+  }
+  section .card .image img {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .card {
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    font-family: "Arvo", serif;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    height: 260px;
+    width: 506px;
+    margin: 20px 50px;
+  }
+  .card:hover {
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    height: 25%;
+    width: 100%;
+    background-color: rgb(238, 38, 119);
+    border-radius: 20px 20px 0 0;
+  }
+  .card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    z-index: 100;
+  }
+  .card .media-icons {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 7px;
+  }
+  .card .media-icons i {
+    color: white;
+    margin-top: 5px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .card .media-icons i:hover {
+    opacity: 1;
+  }
+  .card .name-profession {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    color: rgb(238, 38, 119);
+  }
+  .card .name-profession .name {
+    font-size: 10px;
+    font: weight 600px;
+  }
+  .card .name-profession .profession {
+    font-size: 9px;
+    font: weight 500px;
+  }
+  .card .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+  }
+  .card .rating i {
+    font-size: 15px;
+    color: rgb(238, 38, 119);
+    margin: 0 2px;
+  }
+  .swiper {
+    width: 600px;
+  }
+  section .tarjetaexperiencia {
+    position: relative;
+    width: 550px;
+    width: 1075px;
+    display: flex;
+    align-items: center;
+  }
+  section .card .image {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    padding: 3px;
+    background: none;
+    display: flex;
+  }
+  section .card .image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgb(255, 210, 63);
+    background: rgb(255, 210, 63);
+  }
+  .swiper-pagination {
+    position: absolute;
+    top: 510px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    opacity: 0.7;
+    color: rgb(0, 206, 203);
+    transition: all 0.3s ease;
+  }
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    opacity: 1;
+    color: rgb(0, 206, 203);
+  }
+}
 .encabezado {
   display: flex;
   justify-content: center;
@@ -2250,13 +3129,39 @@ section .card .image img {
 }
 @media (max-width: 513px) {
   .bequicm {
-    padding: 10px;
+    width: 500px;
+    padding: 15px;
   }
   .form1 {
-    font-size: 12px;
+    font-size: 10px;
   }
   .whatsymailt {
-    font-size: 20px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .bequicm {
+    width: 450px;
+    padding: 15px;
+  }
+  .form1 {
+    font-size: 10px;
+  }
+  .whatsymailt {
+    font-size: 15px;
+  }
+}
+@media (max-width: 320px) {
+  .bequicm {
+    font-size: 5px;
+    padding: 10px;
+  }
+  .bequicm .whatsymailt {
+    font-size: 12px;
+  }
+  .bequicm .form1 {
+    width: 320px;
+    font-size: 6px;
   }
 }
 .descargables {
@@ -2289,7 +3194,8 @@ section .card .image img {
 .descargables .descargas:hover {
   box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
 }
-.descargables .descargas:hover::before, .descargables .descargas:hover::after {
+.descargables .descargas:hover::before,
+.descargables .descargas:hover::after {
   display: block;
   content: "";
   position: absolute;
@@ -2401,7 +3307,7 @@ section .card .image img {
 }
 @media (max-width: 815px) {
   .descargables {
-    margin-left: 60px;
+    margin-left: 40px;
     width: 700px;
     justify-content: center;
     display: flex;
@@ -2421,22 +3327,80 @@ section .card .image img {
   .descargables {
     margin-left: 60px;
     width: 500px;
+    padding: 1rem;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
   }
 }
-@media (max-width: 513px) {
+@media (max-width: 520px) {
   .descargables {
-    margin-left: 60px;
-    width: 400px;
+    margin-left: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .descargables .descargas {
+    font-size: 20px;
+    width: 250px;
+    height: 250px;
+    border-radius: 55px;
+  }
+  .descargables .descargas:hover::before,
+  .descargables .descargas:hover::after {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (max-width: 480px) {
+  .descargables {
+    margin-left: auto;
     justify-content: center;
     display: flex;
     flex-direction: column;
   }
 }
-.form {
-  display: grid;
+@media (max-width: 420px) {
+  .descargables {
+    margin-left: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .descargables .descargas {
+    font-size: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 55px;
+  }
+  .descargables .descargas:hover::before,
+  .descargables .descargas:hover::after {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 320px) {
+  .descargables {
+    width: 320px;
+    margin-left: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .descargables .descargas {
+    font-size: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 55px;
+  }
+  .descargables .descargas:hover::before,
+  .descargables .descargas:hover::after {
+    width: 150px;
+    height: 150px;
+  }
+}
+.ingresar {
+  display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Arvo", serif;
@@ -2449,17 +3413,17 @@ section .card .image img {
   }
 }
 @media (max-width: 768px) {
-  .form {
+  .ingresar {
     font-size: 10px;
   }
 }
 @media (max-width: 600px) {
-  .form {
+  .ingresar {
     font-size: 10px;
   }
 }
 @media (max-width: 513px) {
-  .form {
+  .ingresar {
     font-size: 10px;
   }
 }
@@ -2796,7 +3760,6 @@ section .card .image img {
     height: 50%;
   }
 }
-/*LOGOWATS*/
 .piepagina {
   width: 1200px;
   margin-left: auto;
@@ -2822,7 +3785,6 @@ section .card .image img {
 .logoinferior img {
   height: 100px;
   width: auto;
-  margin-top: 50px;
 }
 .logoinferior img:hover {
   transform: scale(1.2);
@@ -2971,56 +3933,113 @@ p.CopyRigth {
 }
 @media (max-width: 600px) {
   .piepagina {
-    width: 500px;
+    width: 300px;
   }
   .logoinferior {
-    width: 500px;
+    width: 300px;
     display: flex;
-    justify-content: center;
-  }
-  .redeswebsicon ul {
-    width: 500px;
     justify-content: center;
     align-items: center;
   }
-  .CopyRigth {
-    width: 500px;
+  .logoinferior img {
+    width: 50%;
+    height: auto;
+  }
+  .redeswebsicon ul {
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  .redeswebsicon ul li {
+    width: 300px;
+  }
+  .redeswebsicon ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 53px;
+    border-radius: 50%;
+    font-size: 30px;
+  }
+  p.CopyRigth {
+    width: 300px;
+    font-size: 10px;
   }
 }
-@media (max-width: 513px) {
+@media (max-width: 520px) {
   .piepagina {
-    width: 400px;
+    width: 300px;
   }
   .logoinferior {
-    width: 400px;
+    width: 300px;
     display: flex;
-    justify-content: center;
-  }
-  .redeswebsicon ul {
-    width: 400px;
     justify-content: center;
     align-items: center;
   }
-  .CopyRigth {
-    width: 400px;
+  .logoinferior img {
+    width: 40%;
+    height: auto;
+  }
+  .redeswebsicon ul {
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  .redeswebsicon ul li {
+    width: 300px;
+  }
+  .redeswebsicon ul li a {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 53px;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+  p.CopyRigth {
+    width: 300px;
+    font-size: 10px;
   }
 }
 @media (max-width: 480px) {
   .piepagina {
-    width: 400px;
+    width: 300px;
   }
   .logoinferior {
-    width: 400px;
+    width: 300px;
     display: flex;
-    justify-content: center;
-  }
-  .redeswebsicon ul {
-    width: 400px;
     justify-content: center;
     align-items: center;
   }
-  .CopyRigth {
-    width: 400px;
+  .logoinferior img {
+    width: 40%;
+    height: auto;
+  }
+  .redeswebsicon ul {
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  .redeswebsicon ul li {
+    width: 300px;
+  }
+  .redeswebsicon ul li a {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 53px;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+  p.CopyRigth {
+    width: 300px;
+    font-size: 10px;
   }
 }
 @media (max-width: 320px) {
@@ -3031,9 +4050,10 @@ p.CopyRigth {
     width: 300px;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .logoinferior img {
-    width: 30%;
+    width: 40%;
     height: auto;
   }
   .redeswebsicon ul {
@@ -3041,7 +4061,21 @@ p.CopyRigth {
     justify-content: center;
     align-items: center;
   }
-  .CopyRigth {
+  .redeswebsicon ul li {
     width: 300px;
+  }
+  .redeswebsicon ul li a {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 53px;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+  p.CopyRigth {
+    width: 300px;
+    font-size: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
