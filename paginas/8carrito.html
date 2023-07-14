@@ -30,10 +30,7 @@
 
 <body>
       <!--js-->
-    <script src="../js/servicioscarrito.js"></script>
-    <script src="../js/catalogoservicios.js"></script>
-    <script src="../js/menu.js"></script> 
-
+  
 
 
     <!--SERVICIOS-->
@@ -44,54 +41,58 @@
         <aside>
             <header>
                 <h1 class="logo"> BEQUICM </h1>
-                <ul>
-                    <li>
-                        <a class="boton-menu boton-volver" href="./7carritodecompras.html">
-                            <i class="bi bi-arrow-return-left"></i> Seguir comprando
-                        </a>
-                    </li>
-                    <li>
-                        <a class="boton-menu boton-carrito active" href="./8carrito.html">
-                            <i class="bi bi-cart-fill"></i> Carrito
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <footer>
-                <p class="texto-footer">bequicm</p>
-            </footer>
-        </aside>
-        <main>
-            <h2 class="titulo-principal">Carrito</h2>
-            <div class="contenedor-carrito">
-                <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
-
-                <div id="carrito-productos" class="carrito-productos disabled">
-                    <!-- Esto se va a completar con el JS -->
-                </div>
-
-                <div id="carrito-acciones" class="carrito-acciones disabled">
-                    <div class="carrito-acciones-izquierda">
-                        <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
+                <nav>
+                    <ul>
+                        <li>
+                            <a class="boton-menu boton-volver" href="./7carritodecompras.html">
+                                <i class="bi bi-arrow-return-left"></i> Seguir comprando
+                            </a>
+                        </li>
+                        <li>
+                            <a class="boton-menu boton-carrito active" href="./8carrito.html">
+                                <i class="bi bi-cart-fill"></i> Carrito
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <footer>
+                    <p class="texto-footer">© bequicm</p>
+                </footer>
+            </aside>
+            <main>
+                <h2 class="titulo-principal">Carrito</h2>
+                <div id="contenedor-servicios">
+                    <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
+    
+                    <div id="carrito-servicios" class="carrito-servicios disabled">
+                        <!-- Esto se va a completar con el JS -->
                     </div>
-                    <div class="carrito-acciones-derecha">
-                        <div class="carrito-acciones-total">
-                            <p>Total:</p>
-                            <p id="total">$3000</p>
+    
+                    <div id="carrito-acciones" class="carrito-acciones disabled">
+                        <div class="carrito-acciones-izquierda">
+                            <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
                         </div>
-                        <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora</button>
+                        <div class="carrito-acciones-derecha">
+                            <div class="carrito-acciones-total">
+                                <p>Total:</p>
+                                <p id="total">$3000</p>
+                            </div>
+                            <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora</button>
+                        </div>
                     </div>
+    
+                    <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i></p>
+    
                 </div>
-
-                <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i></p>
-
-            </div>
-        </main>
-    </div>
+            </main>
+        </div>
+        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../js/carrito1.js"></script>
+    <script src="../js/carrito2.js"></script>
    
-
 </body>
 
