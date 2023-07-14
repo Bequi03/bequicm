@@ -1,4 +1,6 @@
-const serviciosArray = [
+
+// LISTADO DE PRODUCTOS  
+const servicios = [
     {
         id: "contenidoEstrategico-1",
         titulo: "contenidoEstrategico1",
@@ -41,9 +43,13 @@ const serviciosArray = [
     },
 ];
 
+
 const contenedorServicios = document.querySelector("#contenedor-servicios");
 const botonCategoria = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
+const totalCarrito = document.querySelector("#totalCarrito");
+const botonesAgregar = document.querySelectorAll(".servicios-agregar");
+const numerito = document.querySelector("#numerito");
 
 function cargarServicios(serviciosElegidos) {
     contenedorServicios.innerHTML = "";
@@ -61,9 +67,10 @@ function cargarServicios(serviciosElegidos) {
 
         contenedorServicios.append(div);
     });
+    actualizarBotonesAgregar();
 }
 
-cargarServicios(serviciosArray);
+cargarServicios(servicios);
 
 botonCategoria.forEach(boton => {
     boton.addEventListener("click", (e) => {
@@ -71,16 +78,62 @@ botonCategoria.forEach(boton => {
         botonCategoria.forEach(boton => boton.classList.remove("active"));
         e.currentTarget.classList.add("active");
 
-        if (e.currentTarget.id !== "todos") {
-            const serviciosCategoria = serviciosArray.filter(servicio => servicio.categoria.id === e.currentTarget.id);
+        if (e.currentTarget.id !== "todosLosServicios") {
+            const serviciosCategoria = servicios.filter(servicios => servicios.categoria.id === e.currentTarget.id);
             tituloPrincipal.innerText = serviciosCategoria[0].categoria.nombre;
 
-            const serviciosBoton = serviciosArray.filter( servicios.categoria.id === e.currentTarget.id);
+            const serviciosBoton = servicios.filter(servicio => servicio.categoria.id === e.currentTarget.id);
             cargarServicios(serviciosBoton);
-            
+                       
         } else {
             tituloPrincipal.innerText = "NUESTROS SERVICIOS";
-            cargarServicios(serviciosArray);
+            cargarServicios(servicios);
         }
     });
 });
+
+
+// BOTONES AGREGAR 
+
+function actualizarBotonesAgregar() {
+    botonAgregar = document.querySelectorAll(".servicios-agregar");
+
+    botonAgregar.forEach(boton => {
+        boton.addEventListener("click", agregarAlCarrito);
+    });
+}
+
+// cantidades en el carrito 
+const serviciosEnCarrito = []
+
+function agregarAlCarrito(e) {
+
+    const idBoton = e.currentTarget.id;
+    const servicioAgregado = servicios.find(servicios => servicios.id === idBoton);
+
+
+
+    if (serviciosEnCarrito.some(servicios => servicios.id === idBoton)) {
+        const index = serviciosEnCarrito.findIndex(servicios => servicios.id === idBoton);
+        serviciosEnCarrito[index].cantidad++;
+        
+      } else {
+        servicioAgregado.cantidad = 1;
+        serviciosEnCarrito.push(servicioAgregado);
+      }
+  actualizarNumerito();
+    }
+    function actualizarNumerito() {
+        let nuevoNumerito = serviciosEnCarrito.reduce((acc, servicios) => acc + servicios.cantidad, 0);
+        numerito.innerText = nuevoNumerito;
+  
+    }
+    
+    
+    
+
+
+
+
+
+
