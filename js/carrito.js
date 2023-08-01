@@ -1,12 +1,11 @@
 const serviciosEnCarrito = JSON.parse(localStorage.getItem("servicios-en-carrito"));
 
-const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
-const contenedorCarritoServicios = document.querySelector("#carrito-servicios");
-const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
-const contenedorCarritoComprado = document.querySelector("#carrito-comprado");
-let botonesEliminar = document.querySelectorAll("#carrito-servicios-eliminar");
-const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
-const contenedorTotal = document.querySelector("#total");
+const botonCategoria = document.querySelectorAll(".boton-categoria");
+const tituloPrincipal = document.querySelector("#titulo-principal");
+const totalCarrito = document.querySelector("#totalCarrito");
+const botonesAgregar = document.querySelectorAll(".servicios-agregar");
+const numerito = document.querySelector("#numerito");
+
 
 function cargarServiciosCarrito() {
   if (serviciosEnCarrito && serviciosEnCarrito.length > 0) {

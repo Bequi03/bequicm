@@ -1,4 +1,4 @@
-let servicios = [];
+let serviciosEnCarrito;
 
 const url = "/js/servicios.json";
 
@@ -37,48 +37,49 @@ const totalCarrito = document.querySelector("#totalCarrito");
 const botonesAgregar = document.querySelectorAll(".servicios-agregar");
 const numerito = document.querySelector("#numerito");
   
-  function cargarServicios(serviciosElegidos) {
-    contenedorServicios.innerHTML = "";
+function cargarServicios(serviciosElegidos) {
+  contenedorServicios.innerHTML = "";
   
-    serviciosElegidos.forEach((servicio) => {
-      const div = document.createElement("div");
-      div.classList.add("servicios");
-      div.innerHTML = `
-        <img class="servicios-imagen" src="${servicio.imagen}" alt="${servicio.titulo}">
-        <div class="servicios-detalles">
-            <h3 class="servicios-titulo">${servicio.titulo}</h3>
-            <p class="servicios-precio">$${servicio.precio}</p>
-            <button class="servicios-agregar" id="${servicio.id}">Agregar</button>
-        </div>`;
+  serviciosElegidos.forEach((servicio) => {
+    const div = document.createElement("div");
+    div.classList.add("servicios");
+    div.innerHTML = `
+      <img class="servicios-imagen" src="${servicio.imagen}" alt="${servicio.titulo}">
+      <div class="servicios-detalles">
+          <h3 class="servicios-titulo">${servicio.titulo}</h3>
+          <p class="servicios-precio">$${servicio.precio}</p>
+          <button class="servicios-agregar" id="${servicio.id}">Agregar</button>
+      </div>`;
   
-      contenedorServicios.append(div);
-    });
-    actualizarBotonesAgregar();
-  }
-  cargarServicios(servicios);
-  
-  botonCategoria.forEach((boton) => {
-    boton.addEventListener("click", (e) => {
-      botonCategoria.forEach((boton) => boton.classList.remove("active"));
-      e.currentTarget.classList.add("active");
-  
-      if (e.currentTarget.id !== "todosLosServicios") {
-        const serviciosCategoria = servicios.filter(
-          (servicios) => servicios.categoria.id === e.currentTarget.id
-        );
-        tituloPrincipal.innerText = serviciosCategoria[0].categoria.nombre;
-  
-        const serviciosBoton = servicios.filter(
-          (servicio) => servicio.categoria.id === e.currentTarget.id
-        );
-        cargarServicios(serviciosBoton);
-      } else {
-        tituloPrincipal.innerText = "NUESTROS SERVICIOS";
-        cargarServicios(servicios);
-      }
-    });
+    contenedorServicios.append(div);
   });
+  actualizarBotonesAgregar();
+}
+
+cargarServicios(servicios);
+
+botonCategoria.forEach((boton) => {
+  boton.addEventListener("click", (e) => {
+    botonCategoria.forEach((boton) => boton.classList.remove("active"));
+    e.currentTarget.classList.add("active");
   
+    if (e.currentTarget.id !== "todosLosServicios") {
+      const serviciosCategoria = servicios.filter(
+        (servicios) => servicios.categoria.id === e.currentTarget.id
+      );
+      tituloPrincipal.innerText = serviciosCategoria[0].categoria.nombre;
+  
+      const serviciosBoton = servicios.filter(
+        (servicio) => servicio.categoria.id === e.currentTarget.id
+      );
+      cargarServicios(serviciosBoton);
+    } else {
+      tituloPrincipal.innerText = "NUESTROS SERVICIOS";
+      cargarServicios(servicios);
+    }
+  });
+});
+
   // BOTONES AGREGAR
   
   function actualizarBotonesAgregar() {
