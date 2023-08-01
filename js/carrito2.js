@@ -1,16 +1,24 @@
-const serviciosEnCarrito = JSON.parse(localStorage.getItem("servicios-en-carrito"));
+let serviciosEnCarrito = localStorage.getItem("servicios-en-carrito");
+serviciosEnCarrito = JSON.parse(serviciosEnCarritoLS); 
+
 
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
-const contenedorCarritoServicios = document.querySelector("#carrito-productos");
+const contenedorCarritoServicios = document.querySelector("#carrito-servicios");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
 const contenedorCarritoComprado = document.querySelector("#carrito-comprado");
+let botonesEliminar = document.querySelectorAll("#carrito-servicios-eliminar");
+const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
+const contenedorTotal = document.querySelector("#total");
 
-if (serviciosEnCarrito) {
+function cargarServiciosCarrito () {
+if (serviciosEnCarrito && serviciosEnCarrito.length >0) {
 
     contenedorCarritoVacio.classList.add("disabled");
     contenedorCarritoServicios.classList.remove("disabled");
     contenedorCarritoAcciones.classList.remove("disabled");
     contenedorCarritoComprado.classList.add("disabled");
+
+    contenedorCarritoServicios.innerHTML = "";
 
     serviciosEnCarrito.forEach(servicios => {
             const div = document.createElement("div");
@@ -38,4 +46,67 @@ if (serviciosEnCarrito) {
 
         contenedorCarritoServicios.append(div);
     })
+} else {
+    
+    contenedorCarritoVacio.classList.remove("disabled");
+    contenedorCarritoServicios.classList.add("disabled");
+    contenedorCarritoAcciones.classList.add("disabled");
+    contenedorCarritoComprado.classList.add("disabled");
+}
+
+actualizarBotonesEliminar();
+actualizarTotal();
+
+}
+
+
+cargarServiciosCarrito ();
+
+
+
+function actualizarBotonesEliminar() {
+    botonEliminar = document.querySelectorAll(".carrito-servicios-eliminar");
+  
+    botonEliminar.forEach((boton) => {
+      boton.addEventListener("click", eliminarDelCarrito);
+    });
+  }
+
+
+  function eliminarDelCarrito () {
+
+    const idBoton = e.currentTarget.id;
+    const index = serviciosEnCarrito.findIndex(servicios => servicios.id === idBoton);
+     serviciosEnCarrito.splice(index,1); 
+     
+cargarServiciosCarrito ();
+
+localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
+  }
+
+botonVaciar.addEventListener("click", vaciarCarrito);
+
+  function vaciarCarrito ()
+
+  {
+    serviciosEnCarrito.length = 0;
+    localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
+cargarServiciosCarrito();
+  }
+
+  function actualizarTotal(){
+    const totalCalculo = serviciosEnCarrito.reduce((acc, servicios) => acc + (servicios.precio + producto.cantidad), 0);
+total.innerText = `$${totalCalculo}`;
+  }
+
+  botonComprar.addEventListener("click", comprarCarrito);
+function comprarCarrito() {
+
+    productosEnCarrito.length = 0;
+    localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
+    
+    contenedorCarritoVacio.classList.add("disabled");
+    contenedorCarritoServicios.classList.add("disabled");
+    contenedorCarritoAcciones.classList.add("disabled");
+    contenedorCarritoComprado.classList.remove("disabled");
 }
