@@ -1,44 +1,41 @@
 let servicios = [];
 
-const url = "./js/servicios.json"
+const url = "/js/servicios.json";
 
-  fetch(url)
-    .then(res => res.json())
-    .then(data => cargarServicios(data))
-       
-      const contenedorServicios = document.querySelector(`#contenedor-servicios`);
+fetch(url)
+  .then(res => res.json())
+  .then(data => cargarServicios(data));
 
-      function cargarServicios(servicios){
+const contenedorServicios = document.querySelector(`#contenedor-servicios`);
 
-      servicios.forEach(servicios => {
-        const card = document.createElement('div');
-        card.innerHTML = `<h2>${servicios.nombre}</p> <img src= "${servicios.img}"/>
-        <button class="btn-comprar"id=${servicios.id}> COMPRAR <burron>`
-        
-        contenedorServicios.appendChild(card);
-    })
-    const botonesComprar = document.querySelectorAll(`.btn-comprar`);
-    botonesComprar.forEach(btn => {
-      btn.addEventListener(`click`, (e)=> agregarAlCarrito(e, servicios))
-    })
-  
-  }
-    
-function agregarAlCarrito (e, servicios){
-  console.log(servicios);
-  console.log(e.target.id);
+function cargarServicios(serviciosData) {
+  servicios = serviciosData;
 
-  const serviciosElegidos = servicios.find( el => el.id === parse(e.target.id))
-console.log(serviciosElegidos);
+  servicios.forEach(servicio => {
+    const card = document.createElement('div');
+    card.innerHTML = `<h2>${servicio.nombre}</h2> <img src="${servicio.img}" />
+    <button class="btn-comprar" id="${servicio.id}">COMPRAR</button>`;
+
+    contenedorServicios.appendChild(card);
+  });
+
+  const botonesComprar = document.querySelectorAll(`.btn-comprar`);
+  botonesComprar.forEach(btn => {
+    btn.addEventListener(`click`, (e) => agregarAlCarrito(e, servicios));
+  });
 }
-   
- 
-  
-  const botonCategoria = document.querySelectorAll(".boton-categoria");
-  const tituloPrincipal = document.querySelector("#titulo-principal");
-  const totalCarrito = document.querySelector("#totalCarrito");
-  const botonesAgregar = document.querySelectorAll(".servicios-agregar");
-  const numerito = document.querySelector("#numerito");
+
+function agregarAlCarrito(e, serviciosData) {
+  const idServicio = e.target.id;
+  const servicioElegido = serviciosData.find(servicio => servicio.id === idServicio);
+  console.log(servicioElegido);
+}
+
+const botonCategoria = document.querySelectorAll(".boton-categoria");
+const tituloPrincipal = document.querySelector("#titulo-principal");
+const totalCarrito = document.querySelector("#totalCarrito");
+const botonesAgregar = document.querySelectorAll(".servicios-agregar");
+const numerito = document.querySelector("#numerito");
   
   function cargarServicios(serviciosElegidos) {
     contenedorServicios.innerHTML = "";
@@ -58,7 +55,6 @@ console.log(serviciosElegidos);
     });
     actualizarBotonesAgregar();
   }
-  
   cargarServicios(servicios);
   
   botonCategoria.forEach((boton) => {
@@ -95,22 +91,22 @@ console.log(serviciosElegidos);
   
   // cantidades en el carrito
   let serviciosEnCarrito;
-  
-  let serviciosEnCarritoLS = localStorage.getItem("servicios-en-carrito");
- 
-  if (serviciosEnCarritoLS) {
-    serviciosEnCarrito = JSON.parse(serviciosEnCarritoLS);
-    actualizarNumerito();
-  } else {
-    serviciosEnCarrito = [];
-  }
+
+let serviciosEnCarritoLS = localStorage.getItem("servicios-en-carrito");
+
+if (serviciosEnCarritoLS) {
+  serviciosEnCarrito = JSON.parse(serviciosEnCarritoLS);
+  actualizarNumerito();
+} else {
+  serviciosEnCarrito = [];
+}
   
   function agregarAlCarrito(e) {
     const idBoton = e.currentTarget.id;
     const servicioAgregado = servicios.find((servicio) => servicio.id === idBoton);
   
     if (serviciosEnCarrito.some((servicio) => servicio.id === idBoton)) {
-      const index = serviciosEnCarrito.findIndex((servicio) => servicio.id === idBoton);
+       index = serviciosEnCarrito.findIndex((servicio) => servicio.id === idBoton);
       serviciosEnCarrito[index].cantidad++;
     } else {
       servicioAgregado.cantidad = 1;

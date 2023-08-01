@@ -1,6 +1,5 @@
 let serviciosEnCarrito = localStorage.getItem("servicios-en-carrito");
-serviciosEnCarrito = JSON.parse(serviciosEnCarritoLS); 
-
+serviciosEnCarrito = JSON.parse(serviciosEnCarrito); 
 
 const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoServicios = document.querySelector("#carrito-servicios");
@@ -10,8 +9,9 @@ let botonesEliminar = document.querySelectorAll("#carrito-servicios-eliminar");
 const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
 const contenedorTotal = document.querySelector("#total");
 
+
 function cargarServiciosCarrito () {
-if (serviciosEnCarrito && serviciosEnCarrito.length >0) {
+  if (serviciosEnCarrito && serviciosEnCarrito.length > 0) {
 
     contenedorCarritoVacio.classList.add("disabled");
     contenedorCarritoServicios.classList.remove("disabled");
@@ -53,7 +53,6 @@ if (serviciosEnCarrito && serviciosEnCarrito.length >0) {
     contenedorCarritoAcciones.classList.add("disabled");
     contenedorCarritoComprado.classList.add("disabled");
 }
-
 actualizarBotonesEliminar();
 actualizarTotal();
 
@@ -73,38 +72,31 @@ function actualizarBotonesEliminar() {
   }
 
 
-  function eliminarDelCarrito () {
-
+  function eliminarDelCarrito(e) {
     const idBoton = e.currentTarget.id;
-    const index = serviciosEnCarrito.findIndex(servicios => servicios.id === idBoton);
-     serviciosEnCarrito.splice(index,1); 
-     
-cargarServiciosCarrito ();
-
-localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
-  }
+    const index = serviciosEnCarrito.findIndex(servicio => servicio.id === idBoton);
+    serviciosEnCarrito.splice(index, 1);
+    cargarServiciosCarrito();
+    localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
+}
 
 botonVaciar.addEventListener("click", vaciarCarrito);
 
-  function vaciarCarrito ()
-
-  {
-    serviciosEnCarrito.length = 0;
-    localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
-cargarServiciosCarrito();
-  }
-
-  function actualizarTotal(){
-    const totalCalculo = serviciosEnCarrito.reduce((acc, servicios) => acc + (servicios.precio + producto.cantidad), 0);
-total.innerText = `$${totalCalculo}`;
-  }
+function vaciarCarrito() {
+  serviciosEnCarrito.length = 0;
+  localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
+  cargarServiciosCarrito();
+}
+function actualizarTotal() {
+  const totalCalculo = serviciosEnCarrito.reduce((acc, servicio) => acc + (servicio.precio * servicio.cantidad), 0);
+  contenedorTotal.innerText = `$${totalCalculo}`;
+}
 
   botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
-
-    productosEnCarrito.length = 0;
+    serviciosEnCarrito.length = 0;
     localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
-    
+
     contenedorCarritoVacio.classList.add("disabled");
     contenedorCarritoServicios.classList.add("disabled");
     contenedorCarritoAcciones.classList.add("disabled");
