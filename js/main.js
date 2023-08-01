@@ -1,13 +1,39 @@
 let servicios = [];
-  
-  fetch("./js/servicios.json")
-    .then(response => response.json())
-    .then(data => {
-        productos = data;
-        cargarServicios(servicios);
+
+const url = "./js/servicios.json"
+
+  fetch(url)
+    .then(res => res.json())
+    .then(data => cargarServicios(data))
+       
+      const contenedorServicios = document.querySelector(`#contenedor-servicios`);
+
+      function cargarServicios(servicios){
+
+      servicios.forEach(servicios => {
+        const card = document.createElement('div');
+        card.innerHTML = `<h2>${servicios.nombre}</p> <img src= "${servicios.img}"/>
+        <button class="btn-comprar"id=${servicios.id}> COMPRAR <burron>`
+        
+        contenedorServicios.appendChild(card);
     })
+    const botonesComprar = document.querySelectorAll(`.btn-comprar`);
+    botonesComprar.forEach(btn => {
+      btn.addEventListener(`click`, (e)=> agregarAlCarrito(e, servicios))
+    })
+  
+  }
+    
+function agregarAlCarrito (e, servicios){
+  console.log(servicios);
+  console.log(e.target.id);
+
+  const serviciosElegidos = servicios.find( el => el.id === parse(e.target.id))
+console.log(serviciosElegidos);
+}
+   
  
-  const contenedorServicios = document.querySelector("#contenedor-servicios");
+  
   const botonCategoria = document.querySelectorAll(".boton-categoria");
   const tituloPrincipal = document.querySelector("#titulo-principal");
   const totalCarrito = document.querySelector("#totalCarrito");
