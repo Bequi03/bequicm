@@ -3424,10 +3424,10 @@ section .card .image img {
     font-size: 10px;
   }
 }
+/* Estilos generales */
 ul {
   margin: 0;
   padding: 0;
-  list-style-type: none;
   list-style-type: none;
 }
 
@@ -3440,11 +3440,13 @@ a {
   grid-template-columns: 1fr 4fr;
   background-color: rgb(238, 38, 119);
 }
-.wrapper .logo {
+
+.logo {
   margin-bottom: 3rem;
   color: rgb(255, 210, 63);
 }
-.wrapper aside {
+
+aside {
   padding: 3rem;
   padding-right: 0;
   color: rgb(255, 210, 63);
@@ -3455,7 +3457,8 @@ a {
   flex-direction: column;
   justify-content: space-between;
 }
-.wrapper aside .boton-menu {
+
+.boton-menu {
   background-color: transparent;
   border: 0;
   color: rgb(255, 210, 63);
@@ -3468,12 +3471,42 @@ a {
   font-size: 0.85rem;
   width: 100%;
 }
-.wrapper aside .boton-menu.active {
+
+.boton-menu.active {
   background-color: white;
   color: rgb(238, 38, 119);
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   position: relative;
+}
+
+.boton-menu.active::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 2rem;
+  bottom: 100%;
+  right: 0;
+  background-color: transparent;
+  border-bottom-right-radius: 0.5rem;
+  box-shadow: 0 1rem 0 white;
+}
+
+.boton-menu.active::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 2rem;
+  top: 100%;
+  right: 0;
+  background-color: transparent;
+  border-top-right-radius: 0.5rem;
+  box-shadow: 0 -1rem 0 white;
+}
+
+.boton-menu > i.bi-hand-index-thumb-fill,
+.boton-menu > i.bi-hand-index-thumb {
+  transform: rotateZ(90deg);
 }
 
 .boton-carrito {
@@ -3492,19 +3525,19 @@ a {
 }
 
 .numerito {
-  background-color: var(--clr-white);
-  color: var(--clr-main);
+  background-color: rgb(238, 38, 119);
+  color: rgb(255, 210, 63);
   padding: 0.15rem 0.25rem;
   border-radius: 0.25rem;
 }
 
 .boton-carrito.active .numerito {
-  background-color: var(--clr-main);
-  color: var(--clr-white);
+  background-color: rgb(238, 38, 119);
+  color: rgb(255, 210, 63);
 }
 
 .texto-footer {
-  color: var(--clr-main-light);
+  color: rgb(255, 210, 63);
   font-size: 0.85rem;
 }
 
@@ -3516,7 +3549,7 @@ main {
   border-radius: 2rem;
   padding: 3rem;
 }
-main .titulo-principal-servicios {
+main .titulo-principal {
   color: rgb(238, 38, 119);
   margin-bottom: 2rem;
 }
@@ -3525,11 +3558,11 @@ main .contenedor-servicios {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
-main .servicios-imagen {
+main .contenedor-servicios .servicio-imagen {
   max-width: 100%;
   border-radius: 0.2rem;
 }
-main .servicios-detalles {
+main .contenedor-servicios .servicio-detalles {
   background-color: rgb(255, 210, 63);
   color: rgb(238, 38, 119);
   padding: 0.5rem;
@@ -3540,23 +3573,23 @@ main .servicios-detalles {
   flex-direction: column;
   gap: 0.25rem;
 }
-main .servicios-titulo {
+main .contenedor-servicios .servicio-titulo {
   font-size: 1rem;
 }
-main .servicios-agregar {
+main .contenedor-servicios .servicio-agregar {
   border: 0;
-  background-color: var(--clr-white);
-  color: var(--clr-main);
+  background-color: rgb(255, 210, 63);
+  color: rgb(255, 210, 63);
   padding: 0.4rem;
   text-transform: uppercase;
   border-radius: 2rem;
   cursor: pointer;
-  border: 2px solid var(--clr-white);
+  border: 2px solid rgb(255, 210, 63);
   transition: background-color 0.2s, color 0.2s;
 }
-main .servicios-agregar:hover {
+main .contenedor-servicios .servicio-agregar:hover {
   background-color: var(--clr-main);
-  color: var(--clr-white);
+  color: var rgb(255, 210, 63);
 }
 
 /** CARRITO **/
@@ -3568,93 +3601,93 @@ main .servicios-agregar:hover {
 
 .carrito-vacio,
 .carrito-comprado {
-  color: var(--clr-main);
+  color: rgb(238, 38, 119);
+  font-size: 1rem;
 }
 
+/* Contenedor general de los servicios del carrito */
 .carrito-servicios {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.carrito-servicios {
+.carrito-servicio {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--clr-gray);
-  color: var(--clr-main);
+  background-color: rgb(255, 210, 63);
+  color: rgb(238, 38, 119);
   padding: 0.5rem;
   padding-right: 1.5rem;
   border-radius: 1rem;
 }
 
-.carrito-servicios-imagen {
-  max-width: 100%;
+.carrito-servicio-imagen {
   width: 4rem;
   border-radius: 1rem;
 }
 
-.carrito-servicios small {
+.carrito-servicio small {
   font-size: 0.75rem;
 }
 
-.carrito-servicios-eliminar {
+.carrito-servicio-eliminar {
   border: 0;
   background-color: transparent;
-  color: var(--clr-red);
+  color: rgb(238, 38, 119);
   cursor: pointer;
 }
 
+/* CARRRITO ACCIONES */
 .carrito-acciones {
   display: flex;
   justify-content: space-between;
 }
-
-.carrito-acciones-vaciar {
+.carrito-acciones .carrito-acciones-izquierda {
+  display: flex;
+}
+.carrito-acciones .carrito-acciones-izquierda .carrito-acciones-vaciar {
   border: 0;
-  background-color: var(--clr-gray);
+  background-color: rgb(238, 38, 119);
   padding: 1rem;
   border-radius: 1rem;
-  color: var(--clr-main);
+  color: rgb(255, 210, 63);
   text-transform: uppercase;
   cursor: pointer;
 }
-
-.carrito-acciones-derecha {
+.carrito-acciones .carrito-acciones-derecha {
   display: flex;
 }
-
-.carrito-acciones-total {
+.carrito-acciones .carrito-acciones-derecha .carrito-acciones-total {
   display: flex;
-  background-color: var(--clr-gray);
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(238, 38, 119);
   padding: 1rem;
-  color: var(--clr-main);
+  color: rgb(255, 210, 63);
   text-transform: uppercase;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   gap: 1rem;
 }
-
-.carrito-acciones-comprar {
+.carrito-acciones .carrito-acciones-derecha .carrito-acciones-comprar {
   border: 0;
-  background-color: var(--clr-main);
+  background-color: rgb(238, 38, 119);
   padding: 1rem;
-  color: var(--clr-white);
+  color: rgb(255, 210, 63);
   text-transform: uppercase;
   cursor: pointer;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
-
-.header-mobile {
+.carrito-acciones .header-mobile {
   display: none;
 }
-
-.close-menu {
+.carrito-acciones .close-menu {
   display: none;
 }
-
-.disabled {
+.carrito-acciones .disabled {
   display: none;
 }
 

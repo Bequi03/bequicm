@@ -1,7 +1,7 @@
+/* Estilos generales */
 ul {
     margin: 0;
     padding: 0;
-    list-style-type: none;
     list-style-type: none;
 }
 
@@ -13,50 +13,75 @@ a {
     display: grid;
     grid-template-columns: 1fr 4fr;
     background-color: $colorrosa;
-
-    .logo {
-        margin-bottom: 3rem;
-        color: $coloramarillo;
-    }   
-
-    aside {
-        padding: 3rem;
-        padding-right: 0;
-        color: $coloramarillo;
-        position: sticky;
-        top: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .boton-menu {
-            background-color: transparent;
-            border: 0;
-            color: $coloramarillo;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            font-weight: 600;
-            padding: 1rem;
-            font-size: .85rem;
-            width: 100%;
-
-            &.active {
-                background-color: white;
-                color: $colorrosa;
-                border-top-left-radius: 1rem;
-                border-bottom-left-radius: 1rem;
-                position: relative;
-            }
-
-
-        }
-
-    }
 }
 
+.logo {
+    margin-bottom: 3rem;
+    color: $coloramarillo;
+}
+
+aside {
+    padding: 3rem;
+    padding-right: 0;
+    color: $coloramarillo;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boton-menu {
+    background-color: transparent;
+    border: 0;
+    color: $coloramarillo;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: 0.85rem;
+    width: 100%;
+}
+
+.boton-menu.active {
+    background-color: white;
+    color:$colorrosa;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+}
+
+.boton-menu.active::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    bottom: 100%;
+    right: 0;
+    background-color: transparent;
+    border-bottom-right-radius: 0.5rem;
+    box-shadow: 0 1rem 0 white;
+}
+
+.boton-menu.active::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    top: 100%;
+    right: 0;
+    background-color: transparent;
+    border-top-right-radius: 0.5rem;
+    box-shadow: 0 -1rem 0  white;
+}
+
+.boton-menu > i.bi-hand-index-thumb-fill,
+.boton-menu > i.bi-hand-index-thumb {
+    transform: rotateZ(90deg);
+}
 
 
 .boton-carrito {
@@ -76,19 +101,19 @@ a {
 
 
 .numerito {
-    background-color: var(--clr-white);
-    color: var(--clr-main);
+    background-color: $colorrosa;
+    color: $coloramarillo;
     padding: .15rem .25rem;
     border-radius: .25rem;
 }
 
 .boton-carrito.active .numerito {
-    background-color: var(--clr-main);
-    color: var(--clr-white);
+    background-color:$colorrosa;
+    color:$coloramarillo;
 }
 
 .texto-footer {
-    color: var(--clr-main-light);
+    color: $coloramarillo;
     font-size: .85rem;
 }
 
@@ -103,7 +128,7 @@ main {
     padding: 3rem;
 
 
-    .titulo-principal-servicios {
+    .titulo-principal {
         color: $colorrosa;
         margin-bottom: 2rem;
     }
@@ -112,14 +137,14 @@ main {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
-    }
+  
 
-    .servicios-imagen {
+    .servicio-imagen {
         max-width: 100%;
         border-radius: 0.2rem;
     }
 
-    .servicios-detalles {
+    .servicio-detalles {
         background-color: $coloramarillo;
         color: $colorrosa;
         padding: .5rem;
@@ -131,25 +156,25 @@ main {
         gap: .25rem;
     }
 
-    .servicios-titulo {
+    .servicio-titulo {
         font-size: 1rem;
     }
 
-    .servicios-agregar {
+    .servicio-agregar {
         border: 0;
-        background-color: var(--clr-white);
-        color: var(--clr-main);
+        background-color: $coloramarillo;
+        color: $coloramarillo;
         padding: .4rem;
         text-transform: uppercase;
         border-radius: 2rem;
         cursor: pointer;
-        border: 2px solid var(--clr-white);
+        border: 2px solid $coloramarillo;
         transition: background-color .2s, color .2s;
     &:hover {
         background-color: var(--clr-main);
-        color: var(--clr-white);
+        color: var$coloramarillo;
     }
 }}
-
+}
 
 
