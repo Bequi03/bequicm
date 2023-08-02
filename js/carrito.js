@@ -7,8 +7,7 @@ const contenedorCarritoComprado = document.querySelector("#carrito-comprado");
 const contenedorTotal = document.querySelector("#total");
 const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
 const botonComprar = document.querySelector("#carrito-acciones-comprar");
-let botonesEliminar = document.querySelectorAll(".carrito-sercicio-eliminar");
-
+let botonesEliminar = document.querySelectorAll(".carrito-servicio-eliminar");
 
 function cargarServiciosCarrito() {
   if (serviciosEnCarrito && serviciosEnCarrito.length > 0) {
@@ -82,14 +81,22 @@ function eliminarDelCarrito(e) {
 
 botonVaciar.addEventListener("click", vaciarCarrito);
 function vaciarCarrito() {
-
- if (result.isConfirmed) {
-          serviciosEnCarrito.length = 0;
-            localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
-            cargarServiciosCarrito();
-        }
-      }
-
+  Swal.fire({
+    title: "¿Vaciar carrito?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Sí",
+    cancelButtonText: "Cancelar"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      serviciosEnCarrito.length = 0;
+      localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
+      cargarServiciosCarrito();
+    }
+  });
+}
 
 function actualizarTotal() {
   const totalCalculo = serviciosEnCarrito.reduce((acc, servicio) => acc + (servicio.precio * servicio.cantidad), 0);
@@ -101,8 +108,7 @@ function actualizarTotal() {
 
 // COMPRAR
 
-  botonComprar.addEventListener("click", comprarCarrito);
-
+botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
   serviciosEnCarrito.length = 0;
   localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
@@ -112,3 +118,5 @@ function comprarCarrito() {
   contenedorCarritoAcciones.classList.add("disabled");
   contenedorCarritoComprado.classList.remove("disabled");
 }
+
+cargarServiciosCarrito();
