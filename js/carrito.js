@@ -1,11 +1,11 @@
-const serviciosEnCarrito = JSON.parse(localStorage.getItem("servicios-en-carrito"));
 
-const botonCategoria = document.querySelectorAll(".boton-categoria");
-const tituloPrincipal = document.querySelector("#titulo-principal");
-const totalCarrito = document.querySelector("#totalCarrito");
-const botonesAgregar = document.querySelectorAll(".servicios-agregar");
-const numerito = document.querySelector("#numerito");
-
+const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
+const contenedorCarritoServicios = document.querySelector("#carrito-servicio");
+const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
+const contenedorCarritoComprado = document.querySelector("#carrito-comprado");
+let botonesEliminar = document.querySelectorAll("#carrito-servicio-eliminar");
+const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
+const contenedorTotal = document.querySelector("#total");
 
 function cargarServiciosCarrito() {
   if (serviciosEnCarrito && serviciosEnCarrito.length > 0) {
@@ -18,26 +18,26 @@ function cargarServiciosCarrito() {
 
     serviciosEnCarrito.forEach((servicios) => {
       const div = document.createElement("div");
-      div.classList.add("carrito-servicios");
+      div.classList.add("carrito-servicio");
       div.innerHTML = `
-        <img class="carrito-servicios-imagen" src="${servicios.imagen}" alt="${servicios.titulo}">
-        <div class="carrito-servicios-titulo">
+        <img class="carrito-servicio-imagen" src="${servicios.imagen}" alt="${servicios.titulo}">
+        <div class="carrito-servicio-titulo">
           <small>Título</small>
           <h3>${servicios.titulo}</h3>
         </div>
-        <div class="carrito-servicios-cantidad">
+        <div class="carrito-servicio-cantidad">
           <small>Cantidad</small>
           <p>${servicios.cantidad}</p>
         </div>
-        <div class="carrito-servicios-precio">
+        <div class="carrito-servicio-precio">
           <small>Precio</small>
           <p>$${servicios.precio}</p>
         </div>
-        <div class="carrito-servicios-subtotal">
+        <div class="carrito-servicio-subtotal">
           <small>Subtotal</small>
           <p>$${servicios.precio * servicios.cantidad}</p>
         </div>
-        <button class="carrito-servicios-eliminar" id="${servicios.id}"><i class="bi bi-trash-fill"></i></button>
+        <button class="carrito-servicio-eliminar" id="${servicios.id}"><i class="bi bi-trash-fill"></i></button>
       `;
       contenedorCarritoServicios.append(div);
     });

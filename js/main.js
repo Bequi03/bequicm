@@ -1,27 +1,42 @@
-let serviciosEnCarrito;
+let servicios = [];
 
 const url = "/js/servicios.json";
 
 fetch(url)
   .then(res => res.json())
-  .then(data => cargarServicios(data));
-
-const contenedorServicios = document.querySelector(`#contenedor-servicios`);
-
-function cargarServicios(serviciosData) {
-  servicios = serviciosData;
-
-  servicios.forEach(servicio => {
-    const card = document.createElement('div');
-    card.innerHTML = `<h2>${servicio.nombre}</h2> <img src="${servicio.img}" />
-    <button class="btn-comprar" id="${servicio.id}">COMPRAR</button>`;
-
-    contenedorServicios.appendChild(card);
+  .then(data => {
+    servicios = data;
+    cargarServicios(servicios);
   });
 
-  const botonesComprar = document.querySelectorAll(`.btn-comprar`);
-  botonesComprar.forEach(btn => {
-    btn.addEventListener(`click`, (e) => agregarAlCarrito(e, servicios));
+const contenedorServicios = document.querySelector("#contenedor-servicios");
+const botonCategorias = document.querySelectorAll(".boton-categoria");
+const tituloPrincipal = document.querySelector("#titulo-principal");
+
+function cargarServicios(serviciosElegidos) {
+  contenedorServicios.innerHTML = "";
+
+  serviciosElegidos.forEach((servicio) => {
+    const div = document.createElement("div");
+    div.classList.add("servicios");
+    div.innerHTML = `
+      <img class="carrito-servicios-imagen" src="${servicio.imagen}" alt="${servicio.titulo}">
+      <div class="servicios-detalles">
+          <h3 class="carrito-servicios-titulo">${servicio.titulo}</h3>
+          <p class="servicios-precio">$${servicio.precio}</p>
+          <button class="servicios-agregar" id="${servicio.id}">Agregar</button>
+      </div>`;
+
+    contenedorServicios.append(div);
+  });
+
+  actualizarBotonesAgregar();
+}
+
+function actualizarBotonesAgregar() {
+  const botonesAgregar = document.querySelectorAll(".servicios-agregar");
+  botonesAgregar.forEach(btn => {
+    btn.addEventListener("click", (e) => agregarAlCarrito(e, servicios));
   });
 }
 
@@ -31,51 +46,21 @@ function agregarAlCarrito(e, serviciosData) {
   console.log(servicioElegido);
 }
 
-const botonCategoria = document.querySelectorAll(".boton-categoria");
-const tituloPrincipal = document.querySelector("#titulo-principal");
-const totalCarrito = document.querySelector("#totalCarrito");
-const botonesAgregar = document.querySelectorAll(".servicios-agregar");
-const numerito = document.querySelector("#numerito");
-  
-function cargarServicios(serviciosElegidos) {
-  contenedorServicios.innerHTML = "";
-  
-  serviciosElegidos.forEach((servicio) => {
-    const div = document.createElement("div");
-    div.classList.add("servicios");
-    div.innerHTML = `
-      <img class="servicios-imagen" src="${servicio.imagen}" alt="${servicio.titulo}">
-      <div class="servicios-detalles">
-          <h3 class="servicios-titulo">${servicio.titulo}</h3>
-          <p class="servicios-precio">$${servicio.precio}</p>
-          <button class="servicios-agregar" id="${servicio.id}">Agregar</button>
-      </div>`;
-  
-    contenedorServicios.append(div);
-  });
-  actualizarBotonesAgregar();
-}
-
-cargarServicios(servicios);
-
-botonCategoria.forEach((boton) => {
+botonCategorias.forEach((boton) => {
   boton.addEventListener("click", (e) => {
-    botonCategoria.forEach((boton) => boton.classList.remove("active"));
+    botonCategorias.forEach((btn) => btn.classList.remove("active"));
     e.currentTarget.classList.add("active");
-  
+
     if (e.currentTarget.id !== "todosLosServicios") {
       const serviciosCategoria = servicios.filter(
-        (servicios) => servicios.categoria.id === e.currentTarget.id
-      );
-      tituloPrincipal.innerText = serviciosCategoria[0].categoria.nombre;
-  
-      const serviciosBoton = servicios.filter(
         (servicio) => servicio.categoria.id === e.currentTarget.id
       );
-      cargarServicios(serviciosBoton);
+
+      cargarServicios(serviciosCategoria);
+      tituloPrincipal.innerText = serviciosCategoria[0].categoria.nombre;
     } else {
-      tituloPrincipal.innerText = "NUESTROS SERVICIOS";
       cargarServicios(servicios);
+      tituloPrincipal.innerText = "Todos los Servicios";
     }
   });
 });

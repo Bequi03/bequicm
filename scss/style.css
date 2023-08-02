@@ -3440,8 +3440,7 @@ a {
   grid-template-columns: 1fr 4fr;
   background-color: rgb(238, 38, 119);
 }
-
-.logo {
+.wrapper .logo {
   margin-bottom: 3rem;
   color: rgb(255, 210, 63);
 }
@@ -3471,7 +3470,6 @@ aside {
   font-size: 0.85rem;
   width: 100%;
 }
-
 .boton-menu.active {
   background-color: white;
   color: rgb(238, 38, 119);
@@ -3479,7 +3477,6 @@ aside {
   border-bottom-left-radius: 1rem;
   position: relative;
 }
-
 .boton-menu.active::before {
   content: "";
   position: absolute;
@@ -3491,7 +3488,6 @@ aside {
   border-bottom-right-radius: 0.5rem;
   box-shadow: 0 1rem 0 white;
 }
-
 .boton-menu.active::after {
   content: "";
   position: absolute;
@@ -3502,11 +3498,6 @@ aside {
   background-color: transparent;
   border-top-right-radius: 0.5rem;
   box-shadow: 0 -1rem 0 white;
-}
-
-.boton-menu > i.bi-hand-index-thumb-fill,
-.boton-menu > i.bi-hand-index-thumb {
-  transform: rotateZ(90deg);
 }
 
 .boton-carrito {
@@ -3523,6 +3514,12 @@ aside {
   font-size: 0.85rem;
   width: 100%;
 }
+.boton-carrito.active .numerito {
+  background-color: rgb(238, 38, 119);
+  color: rgb(255, 210, 63);
+  padding: 0.15rem 0.25rem;
+  border-radius: 0.25rem;
+}
 
 .numerito {
   background-color: rgb(238, 38, 119);
@@ -3531,9 +3528,11 @@ aside {
   border-radius: 0.25rem;
 }
 
-.boton-carrito.active .numerito {
+.numerito {
   background-color: rgb(238, 38, 119);
   color: rgb(255, 210, 63);
+  padding: 0.15rem 0.25rem;
+  border-radius: 0.25rem;
 }
 
 .texto-footer {
@@ -3558,7 +3557,7 @@ main .contenedor-servicios {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
-main .contenedor-servicios .servicio-imagen {
+main .contenedor-servicios .carrito-servicios-imagen {
   max-width: 100%;
   border-radius: 0.2rem;
 }
@@ -3573,10 +3572,10 @@ main .contenedor-servicios .servicio-detalles {
   flex-direction: column;
   gap: 0.25rem;
 }
-main .contenedor-servicios .servicio-titulo {
+main .contenedor-servicios .carrito-servicios-titulo {
   font-size: 1rem;
 }
-main .contenedor-servicios .servicio-agregar {
+main .contenedor-servicios .servicios-agregar {
   border: 0;
   background-color: rgb(255, 210, 63);
   color: rgb(255, 210, 63);
@@ -3587,32 +3586,28 @@ main .contenedor-servicios .servicio-agregar {
   border: 2px solid rgb(255, 210, 63);
   transition: background-color 0.2s, color 0.2s;
 }
-main .contenedor-servicios .servicio-agregar:hover {
-  background-color: var(--clr-main);
+main .contenedor-servicios .servicios-agregar:hover {
+  background-color: white;
   color: var rgb(255, 210, 63);
 }
 
 /** CARRITO **/
-.contenedor-carrito {
+.contenedor-servicio {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-
-.carrito-vacio,
-.carrito-comprado {
+.contenedor-servicio .carrito-vacio,
+.contenedor-servicio .carrito-comprado {
   color: rgb(238, 38, 119);
   font-size: 1rem;
 }
 
 /* Contenedor general de los servicios del carrito */
-.carrito-servicios {
+.carrito-servicio {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-.carrito-servicio {
   display: flex;
   justify-content: space-between;
   align-items: center;
