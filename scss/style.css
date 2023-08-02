@@ -3633,9 +3633,11 @@ main .contenedor-servicios .servicios-agregar:hover {
 .carrito-acciones {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .carrito-acciones .carrito-acciones-izquierda {
   display: flex;
+  align-items: center;
 }
 .carrito-acciones .carrito-acciones-izquierda .carrito-acciones-vaciar {
   border: 0;

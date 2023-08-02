@@ -5,22 +5,21 @@ const contenedorCarritoServicios = document.querySelector("#carrito-servicio");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
 const contenedorCarritoComprado = document.querySelector("#carrito-comprado");
 
-
 const contenedorTotal = document.querySelector("#total");
 const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
 const botonComprar = document.querySelector("#carrito-acciones-comprar");
-let botonesEliminar = document.querySelectorAll(".carrito-servicio-eliminar");
+let botonesEliminar;
 
 function cargarServiciosCarrito() {
-  if (serviciosEnCarrito  && serviciosEnCarrito .length > 0) {
-    contenedorCarritoVacio.classList.add("disabled");
-    contenedorCarritoServicios.classList.remove("disabled");
-    contenedorCarritoAcciones.classList.remove("disabled");
-    contenedorCarritoComprado.classList.add("disabled");
+  if (serviciosEnCarrito && serviciosEnCarrito.length > 0) {
+    contenedorCarritoVacio.style.display = "none";
+    contenedorCarritoServicios.style.display = "block";
+    contenedorCarritoAcciones.style.display = "block";
+    contenedorCarritoComprado.style.display = "none";
 
     contenedorCarritoServicios.innerHTML = "";
 
-    serviciosEnCarrito .forEach(servicio => {
+    serviciosEnCarrito.forEach(servicio => {
       const div = document.createElement("div");
       div.classList.add("carrito-servicio");
       div.innerHTML = `
@@ -46,27 +45,14 @@ function cargarServiciosCarrito() {
       contenedorCarritoServicios.append(div);
     });
   } else {
-    contenedorCarritoVacio.classList.remove("disabled");
-    contenedorCarritoServicios.classList.add("disabled");
-    contenedorCarritoAcciones.classList.add("disabled");
-    contenedorCarritoComprado.classList.add("disabled");
+    contenedorCarritoVacio.style.display = "block";
+    contenedorCarritoServicios.style.display = "none";
+    contenedorCarritoAcciones.style.display = "none";
+    contenedorCarritoComprado.style.display = "none";
   }
-  actualizarBotonesEliminar();
+
   actualizarTotal();
-}  
-
-
-cargarServiciosCarrito();
-
-
-function actualizarBotonesEliminar() {
-  botonesEliminar = document.querySelectorAll(".carrito-servicio-eliminar");
-
-  botonesEliminar.forEach(boton => {
-      boton.addEventListener("click", eliminarDelCarrito);
-  });
 }
-
 
 function eliminarDelCarrito(e) {
   const idBoton = e.currentTarget.id;
@@ -80,9 +66,9 @@ function eliminarDelCarrito(e) {
   servicioEliminado.parentElement.remove();
 
   if (serviciosEnCarrito.length === 0) {
-    contenedorCarritoVacio.classList.remove("disabled");
-    contenedorCarritoServicios.classList.add("disabled");
-    contenedorCarritoAcciones.classList.add("disabled");
+    contenedorCarritoVacio.style.display = "block";
+    contenedorCarritoServicios.style.display = "none";
+    contenedorCarritoAcciones.style.display = "none";
   }
 
   actualizarTotal();
@@ -97,9 +83,9 @@ function vaciarCarrito() {
   const serviciosEnCarritoHTML = document.querySelectorAll(".carrito-servicio");
   serviciosEnCarritoHTML.forEach(servicio => servicio.remove());
 
-  contenedorCarritoVacio.classList.remove("disabled");
-  contenedorCarritoServicios.classList.add("disabled");
-  contenedorCarritoAcciones.classList.add("disabled");
+  contenedorCarritoVacio.style.display = "block";
+  contenedorCarritoServicios.style.display = "none";
+  contenedorCarritoAcciones.style.display = "none";
 }
 
 function actualizarTotal() {
@@ -107,22 +93,28 @@ function actualizarTotal() {
   contenedorTotal.innerText = `$${totalCalculo}`;
 }
 
-if (botonComprar) {
-  botonComprar.addEventListener("click", comprarCarrito);
-}
+cargarServiciosCarrito();
 
 function comprarCarrito() {
   serviciosEnCarrito.length = 0;
   localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
 
-  contenedorCarritoVacio.classList.add("disabled");
-  contenedorCarritoServicios.classList.add("disabled");
-  contenedorCarritoAcciones.classList.add("disabled");
-  contenedorCarritoComprado.classList.remove("disabled");
+  contenedorCarritoVacio.style.display = "none";
+  contenedorCarritoServicios.style.display = "none";
+  contenedorCarritoAcciones.style.display = "none";
+  contenedorCarritoComprado.style.display = "block";
 }
 
-cargarServiciosCarrito();
+if (botonComprar) {
+  botonComprar.addEventListener("click", comprarCarrito);
+}
 
 if (botonVaciar) {
   botonVaciar.addEventListener("click", vaciarCarrito);
 }
+
+// Evento de eliminación directo en los botones de eliminar
+botonesEliminar = document.querySelectorAll(".carrito-servicio-eliminar");
+botonesEliminar.forEach(boton => {
+  boton.addEventListener("click", eliminarDelCarrito);
+});
