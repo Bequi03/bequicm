@@ -4,13 +4,11 @@ const contenedorCarritoVacio = document.querySelector("#carrito-vacio");
 const contenedorCarritoServicios = document.querySelector("#carrito-servicio");
 const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
 const contenedorCarritoComprado = document.querySelector("#carrito-comprado");
-const contenedorTotal = document.querySelector("#total");
-const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
-const botonComprar = document.querySelector("#carrito-acciones-comprar");
-let botonesEliminar = document.querySelectorAll(".carrito-servicio-eliminar");
+
+
 
 function cargarServiciosCarrito() {
-  if (serviciosEnCarrito && serviciosEnCarrito.length > 0) {
+  if (serviciosEnCarrito  && serviciosEnCarrito .length > 0) {
     contenedorCarritoVacio.classList.add("disabled");
     contenedorCarritoServicios.classList.remove("disabled");
     contenedorCarritoAcciones.classList.remove("disabled");
@@ -18,11 +16,9 @@ function cargarServiciosCarrito() {
 
     contenedorCarritoServicios.innerHTML = "";
 
-    serviciosEnCarrito.forEach(servicio => {
-
+    serviciosEnCarrito .forEach(servicio => {
       const div = document.createElement("div");
       div.classList.add("carrito-servicio");
-
       div.innerHTML = `
         <img class="carrito-servicio-imagen" src="${servicio.imagen}" alt="${servicio.titulo}">
         <div class="carrito-servicio-titulo">
@@ -45,10 +41,6 @@ function cargarServiciosCarrito() {
       `;
       contenedorCarritoServicios.append(div);
     });
-
-    actualizarBotonesEliminar();
-    actualizarTotal();
-
   } else {
     contenedorCarritoVacio.classList.remove("disabled");
     contenedorCarritoServicios.classList.add("disabled");
@@ -59,43 +51,46 @@ function cargarServiciosCarrito() {
   actualizarTotal();
 }  
 
+
 cargarServiciosCarrito();
 
+
 function actualizarBotonesEliminar() {
-  const botonesEliminar = document.querySelectorAll(".carrito-servicio-eliminar");
+  botonesEliminar = document.querySelectorAll(".carrito-servicio-eliminar");
 
   botonesEliminar.forEach(boton => {
       boton.addEventListener("click", eliminarDelCarrito);
   });
 }
 
+
 function eliminarDelCarrito(e) {
   const idBoton = e.currentTarget.id;
   const index = serviciosEnCarrito.findIndex(servicio => servicio.id === idBoton);
 
   serviciosEnCarrito.splice(index, 1);
-  cargarServiciosCarrito();
   localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
+  cargarServiciosCarrito();
+
+  if (serviciosEnCarrito.length === 0) {
+    contenedorCarritoVacio.classList.remove("disabled");
+    contenedorCarritoServicios.classList.add("disabled");
+    contenedorCarritoAcciones.classList.add("disabled");
+  }
 }
 
-
-botonVaciar.addEventListener("click", vaciarCarrito);
 function vaciarCarrito() {
-  Swal.fire({
-    title: "¿Vaciar carrito?",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Sí",
-    cancelButtonText: "Cancelar"
-  }).then((result) => {
-    if (result.isConfirmed) {
-      serviciosEnCarrito.length = 0;
-      localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
-      cargarServiciosCarrito();
-    }
-  });
+  serviciosEnCarrito.length = 0;
+  localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
+  cargarServiciosCarrito();
+
+  // Eliminar todos los servicios del contenedor desde vaciar carrito
+  const serviciosEnCarritoHTML = document.querySelectorAll(".carrito-servicio");
+  serviciosEnCarritoHTML.forEach(servicio => servicio.remove());
+
+  contenedorCarritoVacio.classList.remove("disabled");
+  contenedorCarritoServicios.classList.add("disabled");
+  contenedorCarritoAcciones.classList.add("disabled");
 }
 
 function actualizarTotal() {
@@ -103,12 +98,10 @@ function actualizarTotal() {
   contenedorTotal.innerText = `$${totalCalculo}`;
 }
 
+if (botonComprar) {
+  botonComprar.addEventListener("click", comprarCarrito);
+}
 
-
-
-// COMPRAR
-
-botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito() {
   serviciosEnCarrito.length = 0;
   localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
@@ -120,3 +113,7 @@ function comprarCarrito() {
 }
 
 cargarServiciosCarrito();
+
+if (botonVaciar) {
+  botonVaciar.addEventListener("click", vaciarCarrito);
+}
