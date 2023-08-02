@@ -6,6 +6,10 @@ const contenedorCarritoAcciones = document.querySelector("#carrito-acciones");
 const contenedorCarritoComprado = document.querySelector("#carrito-comprado");
 
 
+const contenedorTotal = document.querySelector("#total");
+const botonVaciar = document.querySelector("#carrito-acciones-vaciar");
+const botonComprar = document.querySelector("#carrito-acciones-comprar");
+let botonesEliminar = document.querySelectorAll(".carrito-servicio-eliminar");
 
 function cargarServiciosCarrito() {
   if (serviciosEnCarrito  && serviciosEnCarrito .length > 0) {
@@ -70,13 +74,18 @@ function eliminarDelCarrito(e) {
 
   serviciosEnCarrito.splice(index, 1);
   localStorage.setItem("servicios-en-carrito", JSON.stringify(serviciosEnCarrito));
-  cargarServiciosCarrito();
+
+  // Eliminar el servicio del contenedor actual
+  const servicioEliminado = document.querySelector(`#${idBoton}`);
+  servicioEliminado.parentElement.remove();
 
   if (serviciosEnCarrito.length === 0) {
     contenedorCarritoVacio.classList.remove("disabled");
     contenedorCarritoServicios.classList.add("disabled");
     contenedorCarritoAcciones.classList.add("disabled");
   }
+
+  actualizarTotal();
 }
 
 function vaciarCarrito() {
